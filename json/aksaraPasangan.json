@@ -1,0 +1,129 @@
+{
+    "AksaraPasangan": [{
+        "hanacaraka": [{
+            "id": 1,
+            "nama": "Ha",
+            "aksara": "ꦲ ꧀ꦲ",
+            "contoh1": "ꦲꦩ",
+            "contoh2": "ꦏꦠꦺꦴꦤ꧀ꦲꦥꦶꦏ꧀"
+        }, {
+            "id": 2,
+            "nama": "Na",
+            "aksara": "ꦤ  ꧀ꦤ",
+            "contoh1": "ꦤꦢꦶ",
+            "contoh2": "ꦒꦸꦫꦶꦠ꧀ꦤ"
+        }, {
+            "id": 3,
+            "nama": "Ca",
+            "aksara": "ꦕ",
+            "contoh1": "ꦕꦫꦏ",
+            "contoh2": "ꦥꦚ꧀ꦕꦭ꧀"
+        }, {
+            "id": 4,
+            "nama": "Ra",
+            "aksara": "ꦫ ꧀ꦫ ",
+            "contoh1": "ꦫꦩꦺ",
+            "contoh2": "ꦩꦔꦤ꧀ꦫꦩ꧀ꦧꦸꦠꦤ꧀"
+        }, {
+            "id": 5,
+            "nama": "Ka",
+            "aksara": "ꦏ   ꧀ꦏ",
+            "contoh1": "ꦏꦏꦸ",
+            "contoh2": "ꦲꦤꦏ꧀ꦏꦝꦭ꧀"
+        }],
+        "datasawala": [{
+            "id": 1,
+            "nama": "Da",
+            "aksara": "ꦢ   ꧀ꦢ",
+            "contoh1": "ꦢꦭꦤ꧀",
+            "contoh2": "ꦢꦤ꧀ꦢꦤ꧀"
+        }, {
+            "id": 2,
+            "nama": "Ta",
+            "aksara": "ꦠ   ꧀ꦠ",
+            "contoh1": "ꦠꦫꦸꦤ",
+            "contoh2": "ꦭꦺꦴꦤ꧀ꦠꦂ"
+        }, {
+            "id": 3,
+            "nama": "Sa",
+            "aksara": "ꦱ ꧀ꦱ",
+            "contoh1": "ꦱꦫꦺꦴꦗ",
+            "contoh2": "ꦲꦏ꧀ꦱꦫ"
+        }, {
+            "id": 4,
+            "nama": "Wa",
+            "aksara": "ꦮ   ꧀ꦮ",
+            "contoh1": "ꦮꦫꦱ꧀",
+            "contoh2": "ꦪꦸꦱ꧀ꦮ"
+        }, {
+            "id": 5,
+            "nama": "La",
+            "aksara": "ꦭ  ꧀ꦭ",
+            "contoh1": "ꦭꦫꦱ꧀",
+            "contoh2": "ꦥ꧀ꦭꦒ"
+        }],
+        "padhajayanya": [{
+            "id": 1,
+            "nama": "Pa",
+            "aksara": "ꦥ ꧀ꦥ꧀ꦭ",
+            "contoh1": "ꦥꦮꦺꦴꦤ꧀",
+            "contoh2": "ꦮꦱ꧀ꦥꦢ"
+        }, {
+            "id": 2,
+            "nama": "Dha",
+            "aksara": "ꦝ ꧀ꦝ",
+            "contoh1": "ꦝꦝꦒ꧀",
+            "contoh2": "ꦏꦤ꧀ꦝꦁ"
+        }, {
+            "id": 3,
+            "nama": "Ja",
+            "aksara": "ꦗ ꧀ꦗ꧀ꦥ꧀ꦭ",
+            "contoh1": "ꦗꦒꦢ꧀",
+            "contoh2": "ꦥꦚ꧀ꦗꦏ꧀"
+        }, {
+            "id": 4,
+            "nama": "Ya",
+            "aksara": "ꦪ ꧀ꦪ ",
+            "contoh1": "ꦗꦒꦢ꧀",
+            "contoh2": "ꦥꦚ꧀ꦗꦏ꧀"
+        }, {
+            "id": 5,
+            "nama": "Nya",
+            "aksara": "ꦚ ꧀ꦚ",
+            "contoh1": "ꦚꦮ",
+            "contoh2": "ꦮꦶꦒ꧀ꦚꦤ꧀"
+        }],
+        "magabathanga": [{
+            "id": 1,
+            "nama": "Ma",
+            "aksara": "ꦩ ꧀ꦩ",
+            "contoh1": "ꦩꦪ",
+            "contoh2": "ꦲꦠ꧀ꦩ"
+        }, {
+            "id": 2,
+            "nama": "Ga",
+            "aksara": "ꦒ ꧀ꦒ",
+            "contoh1": "ꦒꦒꦃ",
+            "contoh2": "ꦢꦶꦕꦺꦴꦏꦺꦴꦠ꧀ꦒꦗꦃ"
+        }, {
+            "id": 3,
+            "nama": "Ba",
+            "aksara": "ꦧ ꧀ꦧ꧀ꦩ",
+            "contoh1": "ꦧꦥꦏ꧀",
+            "contoh2": "ꦲꦩ꧀ꦧꦺꦂ"
+        }, {
+            "id": 4,
+            "nama": "Tha",
+            "aksara": "ꦛ ꧀ꦛ꧀ꦩ",
+            "contoh1": "ꦏ꧀ꦭꦛꦏ꧀",
+            "contoh2": "ꦤꦶꦱ꧀ꦛ"
+        }, {
+            "id": 5,
+            "nama": "Nga",
+            "aksara": "ꦔ ꧀ꦔ꧀ꦩ",
+            "contoh1": "ꦔꦂꦱ",
+            "contoh2": "ꦲꦢꦺꦏ꧀ꦔꦢꦼꦒ꧀"
+        }]
+
+    }]
+}

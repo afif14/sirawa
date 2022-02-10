@@ -1,0 +1,36 @@
+{
+    "aksaraSwara": [{
+            "id": 1,
+            "nama": "A",
+            "aksara": "ꦄ",
+            "contoh1": "ꦄꦩꦺꦫꦶꦏ",
+            "contoh2": "ꦄꦁ​ꦒ"
+        }, {
+            "id": 2,
+            "nama": "I",
+            "aksara": "ꦆ",
+            "contoh1": "ꦆꦤ꧀ꦢꦺꦴꦤꦺꦱꦶꦲ",
+            "contoh2": "ꦆꦤ꧀ꦢꦃ"
+        },
+        {
+            "id": 3,
+            "nama": "U",
+            "aksara": "ꦈ",
+            "contoh1": "ꦈꦤꦶ​ ꦌꦩꦶꦫꦠ꧀​ ꦄꦫꦧ꧀"
+        },
+        {
+            "id": 4,
+            "nama": "E",
+            "aksara": "ꦌ",
+            "contoh1": "ꦌꦫꦺꦴꦥ",
+            "contoh2": "ꦌꦏꦮꦠꦶ"
+        },
+        {
+            "id": 5,
+            "nama": "O",
+            "aksara": "ꦎ",
+            "contoh1": "ꦎꦱꦏ",
+            "contoh2": "ꦎꦩꦤ꧀"
+        }
+    ]
+}

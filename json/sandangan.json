@@ -1,0 +1,56 @@
+{
+    "sandangan": [{
+        "id": 1,
+        "nama": "Taling (e)",
+        "aksara": "ꦺ",
+        "contoh1": "ꦏꦭꦺꦤ꧀",
+        "contoh2": "ꦝꦺꦮꦺ"
+    }, {
+        "id": 2,
+        "nama": "Pěpět (ě)",
+        "aksara": "ꦼ",
+        "contoh1": "ꦱꦼꦥꦺꦢ",
+        "contoh2": "ꦏꦼꦚ꧀ꦕꦤ"
+    }, {
+        "id": 3,
+        "nama": "Wulu (i)",
+        "aksara": "ꦼ",
+        "contoh1": "ꦗꦠꦶ",
+        "contoh2": "ꦤꦔꦶꦱ꧀"
+    }, {
+        "id": 4,
+        "nama": "Wignyan (h)",
+        "aksara": "ꦶ",
+        "contoh1": "ꦱꦮꦃ",
+        "contoh2": "ꦠꦶꦁ​ꦏꦃ"
+    }, {
+        "id": 5,
+        "nama": "Suku (u)",
+        "aksara": " ꦸ ",
+        "contoh1": "ꦧꦸꦁ​ꦱꦸ",
+        "contoh2": "ꦗꦩ꧀ꦧꦸ"
+    }, {
+        "id": 6,
+        "nama": "Cecak (Ng)",
+        "aksara": " ꦁ​",
+        "contoh1": "ꦏꦺꦴꦭꦁ​ ꦏꦭꦶꦁ​"
+    }, {
+        "id": 7,
+        "nama": "Pakon = paten",
+        "aksara": "... ꧀",
+        "contoh1": "ꦩꦔꦤ꧀",
+        "contoh2": "ꦏꦤ꧀ꦛꦶꦭ꧀"
+    }, {
+        "id": 8,
+        "nama": "Layar (r)",
+        "aksara": "ꦂ",
+        "contoh1": "ꦲꦚꦶꦂ",
+        "contoh2": "ꦗꦁ​ꦏꦂ"
+    }, {
+        "id": 9,
+        "nama": "Taling Tarung (o)",
+        "aksara": "ꦺ....ꦴ",
+        "contoh1": "ꦱꦺꦴꦮꦤ꧀",
+        "contoh2": "ꦩ꧀ꦭꦺꦴꦔꦺꦴ"
+    }]
+}
