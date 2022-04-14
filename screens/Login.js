@@ -1,39 +1,70 @@
-import React from 'react';
-import { Text, View } from 'react-native';
+import React, {useEffect, useState} from 'react';
+import { Text, View, TextInput, StyleSheet, Alert } from 'react-native';
 import { FlatButton } from '../components/button';
-import Input from '../components/input';
 import { globalStyles } from '../styles/global';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Login({ navigation }) {
+  const [name, setName] = useState("");
+  const [absen, setAbsen] = useState("")
+
+  const setData = async () => {
+    if(name.length == 0 && absen.length == 0){
+      Alert.alert('Mirengan!', 'tulung isi data riyen')
+    } else {
+      try {
+        await AsyncStorage.setItem('userName', name)
+        await AsyncStorage.setItem('absensi', absen)
+        navigation.navigate('Menu')
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  }
+
   const pressHandler = () => {
     navigation.push('Menu');
   };
 
   return (
     <View style={globalStyles.container}>
-      <Text style={globalStyles.textMd}>Absen riyen</Text>
+      <Text style={globalStyles.textMd}>Mlebet riyen</Text>
       <View>
-        <Input
-          keyboardType='default'
+        <TextInput
           placeholder='Nami Pepak'
-          style={globalStyles.input}
+          value={name}
+          style={styles.input}
+          onChangeText={value => setName(value)}
         />
-        <Input
-          placeholderTextColor='black'
-          keyboardType='numeric'
-          placeholder='No.Absen'
-          style={globalStyles.input}
+        <TextInput
+          keyboard='number'
+          placeholder='Absen'
+          value={absen}
+          style={styles.input}
+          onChangeText={value => setAbsen(value)}
         />
-        <Input
-          placeholderTextColor='black'
-          keyboardType='default'
-          placeholder='Kelas'
-          style={globalStyles.input}
-        />
+        <FlatButton text='mlebet' style={styles.marginTop} onPress={setData} />
       </View>
-      <View style={globalStyles.centerContainer}>
-        <FlatButton text='mlebet' onPress={pressHandler} />
-      </View>
+      <Text style={styles.textBottom} onPress={() => navigation.navigate('register')}>Sampun gadhah akun? Registrasi</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  input: {
+    borderWidth: 1,
+    backgroundColor: 'white',
+    borderRadius: 10,
+    paddingLeft: 20,
+    paddingVertical: 10,
+    marginTop: 20,
+  },
+  marginTop: {
+    marginTop: 20
+  },
+  textBottom: {
+    flex: 1,
+    marginTop: 20,
+    textAlign: 'center'
+  }
+})

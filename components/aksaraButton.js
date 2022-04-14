@@ -1,9 +1,9 @@
 import React from 'react';
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 
-export const FlatButton = ({ text, onPress, style }) => {
+export const AksaraButton = ({ text, onPress }) => {
   return (
-    <TouchableOpacity style={style} onPress={onPress}>
+    <TouchableOpacity onPress={onPress}>
       <View style={styles.button}>
         <Text style={styles.buttonText}>{text}</Text>
       </View>
@@ -13,16 +13,16 @@ export const FlatButton = ({ text, onPress, style }) => {
 
 const styles = StyleSheet.create({
   button: {
-    borderRadius: 20,
-    paddingVertical: 10,
-    paddingHorizontal: 34,
-    backgroundColor: 'white',
+    borderRadius: 7,
+    width: 60,
+    height: 60,
     marginTop: 8,
-    backgroundColor: '#8E806A',
+    backgroundColor: '#c4c4c4',
+    display: 'flex',
   },
   buttonText: {
-    color: 'white',
-    fontSize: 15,
+    color: 'black',
+    fontSize: 48,
     fontFamily: 'poppins-bold',
     fontWeight: 'bold',
     textTransform: 'uppercase',

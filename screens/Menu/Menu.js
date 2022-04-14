@@ -1,22 +1,28 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { globalStyles } from '../../styles/global';
 import { View, Text, StyleSheet, BackHandler, Alert } from 'react-native';
 import { FlatButton } from '../../components/button';
 import CircleIcon from '../../components/circleIcon';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Menu = ({ navigation }) => {
-  const StoryScreen = () => {
-    navigation.push('Story');
-  };
-  const LearnScreen = () => {
-    navigation.push('Learn');
-  };
-  const InformationScreen = () => {
-    navigation.push('Information');
-  };
-  const GuideScreen = () => {
-    navigation.push('Guide');
-  };
+  const [name, setName] = useState('')
+
+  useEffect(() => {
+    getData()
+  }, [])
+
+  const getData = async () => {
+    try {
+      AsyncStorage.getItem('userName').then(value => {
+        if(value != null) {
+          setName(value)
+        }
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   const Exit = () => {
     Alert.alert('Metu', 'Yakin metu saka Aplikasi?', [
@@ -33,14 +39,14 @@ const Menu = ({ navigation }) => {
   return (
     <View style={globalStyles.container}>
       <View style={styles.iconContainer}>
-        <CircleIcon name='exclamation' onPress={InformationScreen} />
-        <CircleIcon name='question' onPress={GuideScreen} />
+        <CircleIcon name='exclamation' onPress={() => navigation.push('Information')} />
+        <CircleIcon name='question' onPress={() => navigation.push('Guide')} />
         <CircleIcon name='trophy' />
       </View>
-      <Text style={styles.textMenu}>Sugeng Rawuh,</Text>
+      <Text style={styles.textMenu}>Sugeng Rawuh, {name}</Text>
       <View style={styles.heightMenu}>
-        <FlatButton text='Sejarah Aksara Jawi' onPress={StoryScreen} />
-        <FlatButton text='Sinau Aksara Jawi' onPress={LearnScreen} />
+        <FlatButton text='Sejarah Aksara Jawi' onPress={() => navigation.push('Story')} />
+        <FlatButton text='Sinau Aksara Jawi' onPress={() => navigation.push('Learn')} />
         <FlatButton text='apalan gelis ala bu lilik' />
         <FlatButton text='latian aksara Jawi' />
       </View>

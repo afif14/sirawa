@@ -11,6 +11,8 @@ import Guide from '../screens/Menu/Guide';
 
 import Learn from '../screens/Learn/Learn';
 import Sandangan from '../screens/Learn/Sandangan';
+import AksaraSwara from '../screens/Learn/AksaraSwara';
+import AksaraLanPasangan from '../screens/Learn/AksaraLanPasangan';
 
 export default function router() {
   const Stack = createNativeStackNavigator();
@@ -27,6 +29,8 @@ export default function router() {
         <Stack.Screen name='Information' component={Information} />
         <Stack.Screen name='Guide' component={Guide} />
         <Stack.Screen name='Sandangan' component={Sandangan} />
+        <Stack.Screen name='AksaraSwara' component={AksaraSwara} />
+        <Stack.Screen name='AksaraLanPasangan' component={AksaraLanPasangan} />
       </Stack.Navigator>
     </NavigationContainer>
   );

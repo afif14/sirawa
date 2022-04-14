@@ -11,14 +11,23 @@ const Menu = ({ navigation }) => {
   const sandanganScreen = () => {
     navigation.push('Sandangan');
   };
+  const aksaraSwaraScreen = () => {
+    navigation.push('AksaraSwara');
+  };
+  const aksaraLanPasanganScreen = () => {
+    navigation.push('AksaraLanPasangan');
+  };
 
   return (
     <View style={globalStyles.container}>
       <Text style={styles.textMenu}>Sampeyan pengin sinau opo?</Text>
       <View style={styles.heightMenu}>
-        <FlatButton text='Aksara Jawi Lan Pasangan' />
+        <FlatButton
+          text='Aksara Jawi Lan Pasangan'
+          onPress={aksaraLanPasanganScreen}
+        />
         <FlatButton text='Sandangan' onPress={sandanganScreen} />
-        <FlatButton text='Aksara Swara' />
+        <FlatButton text='Aksara Swara' onPress={aksaraSwaraScreen} />
       </View>
       <View style={styles.iconBottomContainer}>
         <CircleIcon name='arrow-left' onPress={backToMenu} />
@@ -29,21 +38,21 @@ const Menu = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   heightMenu: {
-    height: 70,
+    height: 80,
   },
   textMenu: {
     fontSize: 30,
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginBottom: 60,
     marginTop: 100,
   },
-  iconContainer: {
-    flexDirection: 'row-reverse',
-  },
   iconBottomContainer: {
-    marginTop: 300,
+    marginTop: 250,
     marginLeft: 250,
   },
+  marginTop: {
+    marginTop: 10
+  }
 });
 
 export default Menu;
