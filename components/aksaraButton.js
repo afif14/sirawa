@@ -14,7 +14,7 @@ export const AksaraButton = ({ text, onPress }) => {
 const styles = StyleSheet.create({
   button: {
     borderRadius: 7,
-    width: 60,
+    width: 65,
     height: 60,
     marginTop: 8,
     backgroundColor: '#c4c4c4',
@@ -22,10 +22,11 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: 'black',
-    fontSize: 48,
+    fontSize: 30,
     fontFamily: 'poppins-bold',
     fontWeight: 'bold',
-    textTransform: 'uppercase',
     textAlign: 'center',
+    marginTop: 'auto',
+    marginBottom: 'auto'
   },
 });

@@ -4,6 +4,7 @@ import { FlatButton } from '../../components/button';
 import CircleIcon from '../../components/circleIcon';
 import { globalStyles } from '../../styles/global';
 import data from '../../json/sandangan.json';
+import {ratioHeight, ratioWidth} from '../../styles/metric'
 
 const Sandangan = ({ navigation }) => {
   const sandangan = data.sandangan;
@@ -41,8 +42,8 @@ const Sandangan = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   historyContainer: {
-    width: 273,
-    height: 455,
+    width: 273 + ratioWidth,
+    height: 455 + ratioHeight,
     backgroundColor: 'white',
     borderRadius: 10,
     borderWidth: 1,
@@ -52,7 +53,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontFamily: 'poppins-bold',
     lineHeight: 42,
-    width: 272,
+    width: 272 + ratioWidth,
     textAlign: 'center',
   },
   historyText: {

@@ -8,18 +8,11 @@ import data from '../../json/aksaraSwara.json';
 const AksaraSwara = ({ navigation }) => {
   const aksara = data.aksaraSwara;
 
-  const backToMenu = () => {
-    navigation.push('Menu');
-  };
-  const learnScreens = () => {
-    navigation.push('Learn');
-  };
-
-  const list = () => {
+  const list = (onPress) => {
     return aksara.map(value => {
       return (
         <View style={styles.container} key={value.id}>
-          <AksaraButton text={value.nama} />
+          <AksaraButton text={value.nama} onPress={onPress}/>
         </View>
       );
     });
@@ -27,7 +20,7 @@ const AksaraSwara = ({ navigation }) => {
 
   return (
     <View style={globalStyles.container}>
-      <CircleIcon name='home' onPress={backToMenu} />
+      <CircleIcon name='home' onPress={() => navigation.push('Menu')} />
       <View style={globalStyles.centerContainer}>
         <Text style={styles.headingText}>Aksara Swara</Text>
         <View style={styles.historyContainer}>
@@ -43,7 +36,7 @@ const AksaraSwara = ({ navigation }) => {
         </View>
       </View>
       <View style={{ marginTop: 30, marginLeft: 250 }}>
-        <CircleIcon name='arrow-left' onPress={learnScreens} />
+        <CircleIcon name='arrow-left' onPress={() => navigation.push('Learn')} />
       </View>
     </View>
   );
@@ -51,7 +44,7 @@ const AksaraSwara = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   headingText: {
-    fontSize: 28,
+    fontSize: 28 ,
     fontFamily: 'poppins-bold',
     lineHeight: 42,
     width: 272,

@@ -47,7 +47,7 @@ const Menu = ({ navigation }) => {
       <View style={styles.heightMenu}>
         <FlatButton text='Sejarah Aksara Jawi' onPress={() => navigation.push('Story')} />
         <FlatButton text='Sinau Aksara Jawi' onPress={() => navigation.push('Learn')} />
-        <FlatButton text='apalan gelis ala bu lilik' />
+        <FlatButton text='apalan gelis ala bu lilik' onPress={() => navigation.push('Taling')}/>
         <FlatButton text='latian aksara Jawi' />
       </View>
       <View style={styles.iconBottomContainer}>

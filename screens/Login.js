@@ -43,9 +43,9 @@ export default function Login({ navigation }) {
           style={styles.input}
           onChangeText={value => setAbsen(value)}
         />
-        <FlatButton text='mlebet' style={styles.marginTop} onPress={setData} />
+        <FlatButton text='mlebet' style={styles.marginTop} onPress={pressHandler} />
       </View>
-      <Text style={styles.textBottom} onPress={() => navigation.navigate('register')}>Sampun gadhah akun? Registrasi</Text>
+      {/* <Text style={styles.textBottom} onPress={() => navigation.navigate('register')}>Sampun gadhah akun? Registrasi</Text> */}
     </View>
   );
 }

@@ -5,32 +5,19 @@ import { FlatButton } from '../../components/button';
 import CircleIcon from '../../components/circleIcon';
 
 const Menu = ({ navigation }) => {
-  const backToMenu = () => {
-    navigation.push('Menu');
-  };
-  const sandanganScreen = () => {
-    navigation.push('Sandangan');
-  };
-  const aksaraSwaraScreen = () => {
-    navigation.push('AksaraSwara');
-  };
-  const aksaraLanPasanganScreen = () => {
-    navigation.push('AksaraLanPasangan');
-  };
-
   return (
     <View style={globalStyles.container}>
       <Text style={styles.textMenu}>Sampeyan pengin sinau opo?</Text>
       <View style={styles.heightMenu}>
         <FlatButton
           text='Aksara Jawi Lan Pasangan'
-          onPress={aksaraLanPasanganScreen}
+          onPress={() => navigation.push('AksaraLanPasangan')}
         />
-        <FlatButton text='Sandangan' onPress={sandanganScreen} />
-        <FlatButton text='Aksara Swara' onPress={aksaraSwaraScreen} />
+        <FlatButton text='Sandangan' onPress={() => navigation.push('Sandangan')} />
+        <FlatButton text='Aksara Swara' onPress={() =>  navigation.push('AksaraSwara')} />
       </View>
       <View style={styles.iconBottomContainer}>
-        <CircleIcon name='arrow-left' onPress={backToMenu} />
+        <CircleIcon name='arrow-left' onPress={() => navigation.push('Menu')} />
       </View>
     </View>
   );

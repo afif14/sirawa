@@ -1,37 +1,68 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { AksaraButton } from '../../components/aksaraButton';
+import Slick from 'react-native-slick';
 import CircleIcon from '../../components/circleIcon';
 import { globalStyles } from '../../styles/global';
 import data from '../../json/aksaraPasangan.json';
 
-const AksaraSwara = ({ navigation }) => {
-  const aksara = data.AksaraPasangan;
+const AksaraLanPasangan = ({ navigation }) => {
+  const aksaraHanacaraka = data.AksaraPasangan[0].hanacaraka
+  const askaraDatasawala = data.AksaraPasangan[0].datasawala
+  const askaraPadhajayanya = data.AksaraPasangan[0].padhajayanya
+  const askaraMagabathanga = data.AksaraPasangan[0].magabathanga
 
-  const backToMenu = () => {
-    navigation.push('Menu');
-  };
-  const learnScreens = () => {
-    navigation.push('Learn');
-  };
-
-  const list = () => {
-    return aksara.map(value => {
+  const hanacaraka = () => {
+    return aksaraHanacaraka.map((value, index) => {
       return (
-        <View style={styles.container} key={value.id}>
-          <AksaraButton text={value.nama} />
+        <View style={styles.container} key={index + 1}>
+          <AksaraButton text={value.nama} onPress={() => navigation.push('DetailAksara', value)}/>
         </View>
       );
     });
   };
+  const datasawala = () => {
+    return askaraDatasawala.map((value, index) => {
+      return (
+        <View style={styles.container} key={index + 1}>
+          <AksaraButton text={value.nama} onPress={() => navigation.push('DetailAksara', value)}/>
+        </View>
+      )
+    })
+  };
+  const padhajayanya = () => {
+    return askaraPadhajayanya.map((value, index) => {
+      return (
+        <View style={styles.container} key={index + 1}>
+          <AksaraButton text={value.nama} onPress={() => navigation.push('DetailAksara', value)}/>
+        </View>
+      )
+    })
+  };
+  const magabathanga = () => {
+    return askaraMagabathanga.map((value, index) => {
+      return (
+        <View style={styles.container} key={index + 1}>
+          <AksaraButton text={value.nama} onPress={() => navigation.push('DetailAksara', value)}/>
+        </View>
+      )
+    })
+  };
+  
 
   return (
     <View style={globalStyles.container}>
-      <CircleIcon name='home' onPress={backToMenu} />
+      <CircleIcon name='home' onPress={() => navigation.push('Menu')} />
       <View style={globalStyles.centerContainer}>
-        <Text style={styles.headingText}>Aksara Swara</Text>
+        <Text style={styles.headingText}>Aksara Jawa Lan Pasangan</Text>
         <View style={styles.historyContainer}>
-          <View style={styles.row}>{list()}</View>
+          <Slick showsPagination={false} loop={false} showsButtons buttonWrapperStyle={styles.buttonWrapper}>
+            <View style={styles.row}>{hanacaraka()}</View>
+            <View style={styles.row}>{datasawala()}</View>
+            <View style={styles.row}>{padhajayanya()}</View>
+            <View style={styles.row}>{magabathanga()}</View>
+          </Slick>
+          
           <View style={styles.keterangan}>
             <Text>Katerangan:</Text>
             <Text>
@@ -43,7 +74,7 @@ const AksaraSwara = ({ navigation }) => {
         </View>
       </View>
       <View style={{ marginTop: 30, marginLeft: 250 }}>
-        <CircleIcon name='arrow-left' onPress={learnScreens} />
+        <CircleIcon name='arrow-left' onPress={() => navigation.push('Learn')} />
       </View>
     </View>
   );
@@ -84,6 +115,9 @@ const styles = StyleSheet.create({
     lineHeight: 21,
     marginBottom: 10,
   },
+  buttonWrapper: {
+    color: 'black',
+  }
 });
 
-export default AksaraSwara;
+export default AksaraLanPasangan;

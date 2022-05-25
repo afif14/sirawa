@@ -3,7 +3,9 @@
         "hanacaraka": [{
             "id": 1,
             "nama": "Ha",
-            "aksara": "ꦲ ꧀ꦲ",
+            "aksara": "ꦲꦩ ",
+            "arti1": "Hama",
+            "arti2": "Katon Apik",
             "contoh1": "ꦲꦩ",
             "contoh2": "ꦏꦠꦺꦴꦤ꧀ꦲꦥꦶꦏ꧀"
         }, {
@@ -11,118 +13,157 @@
             "nama": "Na",
             "aksara": "ꦤ  ꧀ꦤ",
             "contoh1": "ꦤꦢꦶ",
-            "contoh2": "ꦒꦸꦫꦶꦠ꧀ꦤ"
+            "contoh2": "ꦒꦸꦫꦶꦠ꧀ꦤ",
+            "arti1": "Nadi",
+            "arti2": "Guritna"
         }, {
             "id": 3,
             "nama": "Ca",
             "aksara": "ꦕ",
             "contoh1": "ꦕꦫꦏ",
-            "contoh2": "ꦥꦚ꧀ꦕꦭ꧀"
+            "contoh2": "ꦥꦚ꧀ꦕꦭ꧀",
+            "arti1": "Caraka",
+            "arti2": "Pancal"
         }, {
             "id": 4,
             "nama": "Ra",
             "aksara": "ꦫ ꧀ꦫ ",
             "contoh1": "ꦫꦩꦺ",
-            "contoh2": "ꦩꦔꦤ꧀ꦫꦩ꧀ꦧꦸꦠꦤ꧀"
+            "contoh2": "ꦩꦔꦤ꧀ꦫꦩ꧀ꦧꦸꦠꦤ꧀",
+            "arti1": "Rame",
+            "arti2": "Mangan Rambutan"
         }, {
             "id": 5,
             "nama": "Ka",
             "aksara": "ꦏ   ꧀ꦏ",
             "contoh1": "ꦏꦏꦸ",
-            "contoh2": "ꦲꦤꦏ꧀ꦏꦝꦭ꧀"
+            "contoh2": "ꦲꦤꦏ꧀ꦏꦝꦭ꧀",
+            "arti1": "Kaku",
+            "arti2": "Anak Kadhal"
         }],
         "datasawala": [{
             "id": 1,
             "nama": "Da",
             "aksara": "ꦢ   ꧀ꦢ",
             "contoh1": "ꦢꦭꦤ꧀",
-            "contoh2": "ꦢꦤ꧀ꦢꦤ꧀"
+            "contoh2": "ꦢꦤ꧀ꦢꦤ꧀",
+            "arti1": "Dalan",
+            "arti2": "Dandan"
         }, {
             "id": 2,
             "nama": "Ta",
             "aksara": "ꦠ   ꧀ꦠ",
             "contoh1": "ꦠꦫꦸꦤ",
-            "contoh2": "ꦭꦺꦴꦤ꧀ꦠꦂ"
+            "contoh2": "ꦭꦺꦴꦤ꧀ꦠꦂ",
+            "arti1": "Taruna",
+            "arti2": "Lontar"
         }, {
             "id": 3,
             "nama": "Sa",
             "aksara": "ꦱ ꧀ꦱ",
             "contoh1": "ꦱꦫꦺꦴꦗ",
-            "contoh2": "ꦲꦏ꧀ꦱꦫ"
+            "contoh2": "ꦲꦏ꧀ꦱꦫ",
+            "arti1": "Saroja",
+            "arti2": "Aksara"
         }, {
             "id": 4,
             "nama": "Wa",
             "aksara": "ꦮ   ꧀ꦮ",
             "contoh1": "ꦮꦫꦱ꧀",
-            "contoh2": "ꦪꦸꦱ꧀ꦮ"
+            "contoh2": "ꦪꦸꦱ꧀ꦮ",
+            "arti1": "Waras",
+            "arti2": "Yuswa"
         }, {
             "id": 5,
             "nama": "La",
             "aksara": "ꦭ  ꧀ꦭ",
             "contoh1": "ꦭꦫꦱ꧀",
-            "contoh2": "ꦥ꧀ꦭꦒ"
+            "contoh2": "ꦥ꧀ꦭꦒ",
+            "arti1": "Laras",
+            "arti2": "Plaga"
         }],
         "padhajayanya": [{
             "id": 1,
             "nama": "Pa",
             "aksara": "ꦥ ꧀ꦥ꧀ꦭ",
             "contoh1": "ꦥꦮꦺꦴꦤ꧀",
-            "contoh2": "ꦮꦱ꧀ꦥꦢ"
+            "contoh2": "ꦮꦱ꧀ꦥꦢ",
+            "arti1": "Pawon",
+            "arti2": "Waspada"
         }, {
             "id": 2,
             "nama": "Dha",
             "aksara": "ꦝ ꧀ꦝ",
             "contoh1": "ꦝꦝꦒ꧀",
-            "contoh2": "ꦏꦤ꧀ꦝꦁ"
+            "contoh2": "ꦏꦤ꧀ꦝꦁ",
+            "arti1": "Dhadhag",
+            "arti2": "Lontar"
         }, {
             "id": 3,
             "nama": "Ja",
             "aksara": "ꦗ ꧀ꦗ꧀ꦥ꧀ꦭ",
             "contoh1": "ꦗꦒꦢ꧀",
-            "contoh2": "ꦥꦚ꧀ꦗꦏ꧀"
+            "contoh2": "ꦥꦚ꧀ꦗꦏ꧀",
+            "arti1": "Jagad",
+            "arti2": "Panjak"
         }, {
             "id": 4,
             "nama": "Ya",
             "aksara": "ꦪ ꧀ꦪ ",
             "contoh1": "ꦗꦒꦢ꧀",
-            "contoh2": "ꦥꦚ꧀ꦗꦏ꧀"
+            "contoh2": "ꦥꦚ꧀ꦗꦏ꧀",
+            "arti1": "Yayah",
+            "arti2": "Anak Yatim"
         }, {
             "id": 5,
             "nama": "Nya",
             "aksara": "ꦚ ꧀ꦚ",
             "contoh1": "ꦚꦮ",
-            "contoh2": "ꦮꦶꦒ꧀ꦚꦤ꧀"
+            "arti1": "Nyawa",
+            "arti2": "Wignyan"
         }],
         "magabathanga": [{
             "id": 1,
             "nama": "Ma",
             "aksara": "ꦩ ꧀ꦩ",
             "contoh1": "ꦩꦪ",
-            "contoh2": "ꦲꦠ꧀ꦩ"
+            "contoh2": "ꦲꦠ꧀ꦩ",
+            "arti1": "Maya",
+            "arti2": "Atma"
+
         }, {
             "id": 2,
             "nama": "Ga",
             "aksara": "ꦒ ꧀ꦒ",
             "contoh1": "ꦒꦒꦃ",
-            "contoh2": "ꦢꦶꦕꦺꦴꦏꦺꦴꦠ꧀ꦒꦗꦃ"
+            "contoh2": "ꦢꦶꦕꦺꦴꦏꦺꦴꦠ꧀ꦒꦗꦃ",
+            "arti1": "Gagah",
+            "arti2": "Dicokot Gajah"
+
         }, {
             "id": 3,
             "nama": "Ba",
             "aksara": "ꦧ ꧀ꦧ꧀ꦩ",
             "contoh1": "ꦧꦥꦏ꧀",
-            "contoh2": "ꦲꦩ꧀ꦧꦺꦂ"
+            "contoh2": "ꦲꦩ꧀ꦧꦺꦂ",
+            "arti1": "Bapak",
+            "arti2": "Amber"
         }, {
             "id": 4,
             "nama": "Tha",
             "aksara": "ꦛ ꧀ꦛ꧀ꦩ",
             "contoh1": "ꦏ꧀ꦭꦛꦏ꧀",
-            "contoh2": "ꦤꦶꦱ꧀ꦛ"
+            "contoh2": "ꦤꦶꦱ꧀ꦛ",
+            "arti1": "Klatak",
+            "arti2": "Nista"
         }, {
             "id": 5,
             "nama": "Nga",
             "aksara": "ꦔ ꧀ꦔ꧀ꦩ",
             "contoh1": "ꦔꦂꦱ",
-            "contoh2": "ꦲꦢꦺꦏ꧀ꦔꦢꦼꦒ꧀"
+            "contoh2": "ꦲꦢꦺꦏ꧀ꦔꦢꦼꦒ꧀",
+            "arti1": "Ngarsa",
+            "arti2": "Adek ngadeg"
         }]
 
     }]
