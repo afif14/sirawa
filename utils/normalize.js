@@ -1,12 +1,18 @@
-import { Dimensions } from 'react-native'
-const { width, height } = Dimensions.get('window')
+import react from 'react'
+import {Dimensions, Platform, PixelRatio} from 'react-native'
 
-//Guideline sizes are based on standard ~5" screen mobile device
-const guidelineBaseWidth = 350
-const guidelineBaseHeight = 680
+const {
+   width : SCREEN_WIDTH,
+   height: SCREEN_HEIGHT
+} = Dimensions.get('window')
 
-const scale = size => width / guidelineBaseWidth * size
-const verticalScale = size => height / guidelineBaseHeight * size
-const moderateScale = (size, factor = 0.5) => size + (scale(size) - size) * factor
+const scale = SCREEN_WIDTH / 375
 
-export { scale, verticalScale, moderateScale }
+export function normalize(size) {
+   const newSize = size*scale
+   if(Platform.OS == 'ios'){
+      return Math.round(PixelRatio.roundToNearestPixel(newSize))
+   } else {
+      return Math.round(PixelRatio.roundToNearestPixel(newSize)) - 2
+   }
+}

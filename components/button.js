@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
+import { normalize } from '../utils/normalize'
 
 export const FlatButton = ({ text, onPress, style }) => {
   return (
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: 'white',
-    fontSize: 15,
+    fontSize: normalize(15),
     fontFamily: 'poppins-bold',
     fontWeight: 'bold',
     textTransform: 'uppercase',

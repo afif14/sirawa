@@ -23,7 +23,7 @@ export default function Login({ navigation }) {
   }
 
   const pressHandler = () => {
-    navigation.push('Menu');
+    setData()
   };
 
   return (

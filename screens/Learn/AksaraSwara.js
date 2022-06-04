@@ -8,11 +8,11 @@ import data from '../../json/aksaraSwara.json';
 const AksaraSwara = ({ navigation }) => {
   const aksara = data.aksaraSwara;
 
-  const list = (onPress) => {
-    return aksara.map(value => {
+  const list = () => {
+    return aksara.map((value, index) => {
       return (
-        <View style={styles.container} key={value.id}>
-          <AksaraButton text={value.nama} onPress={onPress}/>
+        <View style={styles.container} key={index + 1}>
+          <AksaraButton text={value.nama} onPress={() => navigation.push('DetailSwara', value)}/>
         </View>
       );
     });

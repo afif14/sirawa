@@ -9,18 +9,11 @@ import {ratioHeight, ratioWidth} from '../../styles/metric'
 const Sandangan = ({ navigation }) => {
   const sandangan = data.sandangan;
 
-  const backToMenu = () => {
-    navigation.push('Menu');
-  };
-  const learnScreens = () => {
-    navigation.push('Learn');
-  };
-
   const list = () => {
-    return sandangan.map(value => {
+    return sandangan.map((value, index) => {
       return (
-        <View style={styles.buttonContainer} key={value.id}>
-          <FlatButton text={value.nama} />
+        <View style={styles.buttonContainer} key={index + 1}>
+          <FlatButton text={value.nama} onPress={() => navigation.push('DetailSandangan', value)}/>
         </View>
       );
     });
@@ -28,13 +21,13 @@ const Sandangan = ({ navigation }) => {
 
   return (
     <View style={globalStyles.container}>
-      <CircleIcon name='home' onPress={backToMenu} />
+      <CircleIcon name='home' onPress={() => navigation.push('Menu') } />
       <View style={globalStyles.centerContainer}>
         <Text style={styles.headingText}>Sandangan Aksara Jawa</Text>
         <View style={styles.historyContainer}>{list()}</View>
       </View>
       <View style={{ marginTop: 30, marginLeft: 250 }}>
-        <CircleIcon name='arrow-left' onPress={learnScreens} />
+        <CircleIcon name='arrow-left' onPress={() => navigation.push('Learn') } />
       </View>
     </View>
   );

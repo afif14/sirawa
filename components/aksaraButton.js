@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
+import { normalize } from '../utils/normalize'
 
 export const AksaraButton = ({ text, onPress }) => {
   return (
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: 'black',
-    fontSize: 30,
+    fontSize: normalize(30),
     fontFamily: 'poppins-bold',
     fontWeight: 'bold',
     textAlign: 'center',

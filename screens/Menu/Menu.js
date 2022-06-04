@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, BackHandler, Alert } from 'react-native';
 import { FlatButton } from '../../components/button';
 import CircleIcon from '../../components/circleIcon';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { normalize } from '../../utils/normalize'
 
 const Menu = ({ navigation }) => {
   const [name, setName] = useState('')
@@ -47,7 +48,7 @@ const Menu = ({ navigation }) => {
       <View style={styles.heightMenu}>
         <FlatButton text='Sejarah Aksara Jawi' onPress={() => navigation.push('Story')} />
         <FlatButton text='Sinau Aksara Jawi' onPress={() => navigation.push('Learn')} />
-        <FlatButton text='apalan gelis ala bu lilik' onPress={() => navigation.push('Taling')}/>
+        <FlatButton text='apalan gelis ala bu lilik' onPress={() => navigation.push('ApalanCepet')}/>
         <FlatButton text='latian aksara Jawi' />
       </View>
       <View style={styles.iconBottomContainer}>
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
     height: 70,
   },
   textMenu: {
-    fontSize: 30,
+    fontSize: normalize(30),
     fontWeight: 'bold',
     marginBottom: 20,
     marginTop: 100,

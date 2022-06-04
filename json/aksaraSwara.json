@@ -3,12 +3,16 @@
             "id": 1,
             "nama": "A",
             "aksara": "ꦄ",
+            "arti1": "Amerika",
+            "arti2": "Angga",
             "contoh1": "ꦄꦩꦺꦫꦶꦏ",
             "contoh2": "ꦄꦁ​ꦒ"
         }, {
             "id": 2,
             "nama": "I",
             "aksara": "ꦆ",
+            "arti1": "Indonesia",
+            "arti2": "Indah",
             "contoh1": "ꦆꦤ꧀ꦢꦺꦴꦤꦺꦱꦶꦲ",
             "contoh2": "ꦆꦤ꧀ꦢꦃ"
         },
@@ -16,12 +20,15 @@
             "id": 3,
             "nama": "U",
             "aksara": "ꦈ",
+            "arti1": "Uni Emirat Arab",
             "contoh1": "ꦈꦤꦶ​ ꦌꦩꦶꦫꦠ꧀​ ꦄꦫꦧ꧀"
         },
         {
             "id": 4,
             "nama": "E",
             "aksara": "ꦌ",
+            "arti1": "Eropa",
+            "arti2": "Ekawati",
             "contoh1": "ꦌꦫꦺꦴꦥ",
             "contoh2": "ꦌꦏꦮꦠꦶ"
         },
@@ -29,6 +36,8 @@
             "id": 5,
             "nama": "O",
             "aksara": "ꦎ",
+            "arti1": "Osaka",
+            "arti2": "Oman",
             "contoh1": "ꦎꦱꦏ",
             "contoh2": "ꦎꦩꦤ꧀"
         }

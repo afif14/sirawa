@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import {ratioHeight, ratioWidth} from './metric.js'
 
 export const globalStyles = StyleSheet.create({
   container: {
@@ -15,13 +14,13 @@ export const globalStyles = StyleSheet.create({
     fontFamily: 'poppins-bold',
     fontSize: 48,
     lineHeight: 72,
-    marginTop: 250 + ratioHeight,
+    marginTop: 250,
   },
   textMd: {
     fontSize: 30,
     lineHeight: 45,
     fontWeight: 'bold',
-    marginTop: 140 + ratioHeight,
+    marginTop: 140,
     marginBottom: 20,
   },
   textSm: {

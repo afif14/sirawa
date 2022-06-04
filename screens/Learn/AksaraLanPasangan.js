@@ -5,6 +5,7 @@ import Slick from 'react-native-slick';
 import CircleIcon from '../../components/circleIcon';
 import { globalStyles } from '../../styles/global';
 import data from '../../json/aksaraPasangan.json';
+import { normalize } from '../../utils/normalize'
 
 const AksaraLanPasangan = ({ navigation }) => {
   const aksaraHanacaraka = data.AksaraPasangan[0].hanacaraka
@@ -56,7 +57,7 @@ const AksaraLanPasangan = ({ navigation }) => {
       <View style={globalStyles.centerContainer}>
         <Text style={styles.headingText}>Aksara Jawa Lan Pasangan</Text>
         <View style={styles.historyContainer}>
-          <Slick showsPagination={false} loop={false} showsButtons buttonWrapperStyle={styles.buttonWrapper}>
+          <Slick showsPagination={false} loop={false} buttonWrapperStyle={styles.buttonWrapper}>
             <View style={styles.row}>{hanacaraka()}</View>
             <View style={styles.row}>{datasawala()}</View>
             <View style={styles.row}>{padhajayanya()}</View>
@@ -64,11 +65,11 @@ const AksaraLanPasangan = ({ navigation }) => {
           </Slick>
           
           <View style={styles.keterangan}>
-            <Text>Katerangan:</Text>
-            <Text>
+            <Text style={ styles.textKeterangan}>Katerangan:</Text>
+            <Text style={ styles.textKeterangan}>
               Aksara pasangan fungsine kanggo nyambungake konsonan gatra tutup
               karo gatra sabanjure, kajaba aksara 'r', aksara 'h', lan aksara
-              'ng'.gan
+              'ng'.
             </Text>
           </View>
         </View>
@@ -82,7 +83,7 @@ const AksaraLanPasangan = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   headingText: {
-    fontSize: 28,
+    fontSize: normalize(28),
     fontFamily: 'poppins-bold',
     lineHeight: 42,
     width: 272,
@@ -110,10 +111,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   keterangan: {
-    fontSize: 14,
-    fontWeight: '600',
     lineHeight: 21,
     marginBottom: 10,
+  },
+  textKeterangan: {
+    fontSize: normalize(14),
+    fontWeight: '600'
   },
   buttonWrapper: {
     color: 'black',

@@ -3,6 +3,7 @@ import { globalStyles } from '../../styles/global';
 import { View, Text, StyleSheet } from 'react-native';
 import { FlatButton } from '../../components/button';
 import CircleIcon from '../../components/circleIcon';
+import { normalize } from '../../utils/normalize'
 
 const Menu = ({ navigation }) => {
   return (
@@ -10,7 +11,7 @@ const Menu = ({ navigation }) => {
       <Text style={styles.textMenu}>Sampeyan pengin sinau opo?</Text>
       <View style={styles.heightMenu}>
         <FlatButton
-          text='Aksara Jawi Lan Pasangan'
+          text='Aksara Jawa Lan Pasangan'
           onPress={() => navigation.push('AksaraLanPasangan')}
         />
         <FlatButton text='Sandangan' onPress={() => navigation.push('Sandangan')} />
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
     height: 80,
   },
   textMenu: {
-    fontSize: 30,
+    fontSize: normalize(30),
     fontWeight: 'bold',
     marginBottom: 60,
     marginTop: 100,

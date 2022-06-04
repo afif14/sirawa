@@ -13,8 +13,10 @@ import Learn from '../screens/Learn/Learn';
 import Sandangan from '../screens/Learn/Sandangan';
 import AksaraSwara from '../screens/Learn/AksaraSwara';
 import AksaraLanPasangan from '../screens/Learn/AksaraLanPasangan';
-import Taling from '../screens/Sandangan/Taling'
-import DetailAksara from '../screens/AkasaraLanPasangan';
+import DetailAksara from '../screens/Detail/DetailAksara';
+import DetailSandangan from '../screens/Detail/DetailSandangan';
+import DetailSwara from '../screens/Detail/DetailSwara';
+import ApalanCepet from '../screens/bulilik/ApalanCepet'
 
 export default function router() {
   const Stack = createNativeStackNavigator();
@@ -34,7 +36,9 @@ export default function router() {
         <Stack.Screen name='AksaraSwara' component={AksaraSwara} />
         <Stack.Screen name='AksaraLanPasangan' component={AksaraLanPasangan} />
         <Stack.Screen name='DetailAksara' component={DetailAksara} />
-        <Stack.Screen name='Taling' component={Taling} />
+        <Stack.Screen name='DetailSandangan' component={DetailSandangan} />
+        <Stack.Screen name='DetailSwara' component={DetailSwara} />
+        <Stack.Screen name='ApalanCepet' component={ ApalanCepet } />
       </Stack.Navigator>
     </NavigationContainer>
   );
