@@ -5,9 +5,9 @@ import Router from './routes/router';
 
 const getFonts = () =>
   Font.loadAsync({
-    'poppins-reguler': require('./assets/fonts/Poppins-Regular.ttf'),
-    'poppins-bold': require('./assets/fonts/Poppins-Bold.ttf'),
-    'poppins-semibold': require('./assets/fonts/Poppins-SemiBold.ttf'),
+    'roboto-reguler': require('./assets/fonts/Roboto-Regular.ttf'),
+    'roboto-bold': require('./assets/fonts/Roboto-Bold.ttf'),
+    'roboto-medium': require('./assets/fonts/Roboto-Medium.ttf'),
   });
 
 export default function App() {
@@ -18,7 +18,7 @@ export default function App() {
   } else {
     return (
       <AppLoading
-        startAsync={getFonts}
+        startAsync={getFonts()}
         onFinish={() => setFontLoaded(true)}
         onError={() => console.log('error')}
       />
