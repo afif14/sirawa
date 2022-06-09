@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'black',
     fontSize: normalize(30),
-    fontFamily: 'poppins-bold',
+    fontFamily: 'roboto-bold',
     fontWeight: 'bold',
     textAlign: 'center',
     marginTop: 'auto',

@@ -5,13 +5,13 @@ export const globalStyles = StyleSheet.create({
     backgroundColor: '#FFE9D0',
     padding: 24,
     flex: 1,
-    fontFamily: 'poppins-reguler',
+    fontFamily: 'roboto-reguler',
   },
   centerContainer: {
     alignItems: 'center',
   },
   textLg: {
-    fontFamily: 'poppins-bold',
+    fontFamily: 'roboto-bold',
     fontSize: 48,
     lineHeight: 72,
     marginTop: 250,

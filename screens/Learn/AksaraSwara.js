@@ -45,7 +45,7 @@ const AksaraSwara = ({ navigation }) => {
 const styles = StyleSheet.create({
   headingText: {
     fontSize: 28 ,
-    fontFamily: 'poppins-bold',
+    fontFamily: 'roboto-bold',
     lineHeight: 42,
     width: 272,
     textAlign: 'center',

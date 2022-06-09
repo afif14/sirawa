@@ -39,7 +39,7 @@ const DetailAksara = ({ route, navigation }) => {
 const styles = StyleSheet.create({
    headingText: {
       fontSize: normalize(28),
-      fontFamily: 'poppins-bold',
+      fontFamily: 'roboto-bold',
       width: 272,
       textAlign: 'center',
    },

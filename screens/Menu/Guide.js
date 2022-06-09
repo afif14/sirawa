@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   },
   headingText: {
     fontSize: 25,
-    fontFamily: 'poppins-bold',
+    fontFamily: 'roboto-bold',
     lineHeight: 42,
     marginVertical: 30,
     width: 272,
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     lineHeight: 19,
     fontWeight: '500',
     padding: 10,
-    fontFamily: 'poppins-reguler',
+    fontFamily: 'roboto-reguler',
   },
 });
 

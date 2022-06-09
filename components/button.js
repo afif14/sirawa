@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: 'white',
-    fontSize: normalize(15),
-    fontFamily: 'poppins-bold',
+    fontSize: normalize(16),
+    fontFamily: 'roboto-bold',
     fontWeight: 'bold',
     textTransform: 'uppercase',
     textAlign: 'center',

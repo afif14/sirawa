@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   },
   headingText: {
     fontSize: 28,
-    fontFamily: 'poppins-bold',
+    fontFamily: 'roboto-bold',
     lineHeight: 42,
     width: 272 + ratioWidth,
     textAlign: 'center',
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     lineHeight: 19,
     fontWeight: '500',
     padding: 1,
-    fontFamily: 'poppins-reguler',
+    fontFamily: 'roboto-reguler',
   },
   buttonContainer: {
     paddingHorizontal: 15,
