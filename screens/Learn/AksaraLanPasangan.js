@@ -17,7 +17,7 @@ const AksaraLanPasangan = ({ navigation }) => {
     return aksaraHanacaraka.map((value, index) => {
       return (
         <View style={styles.container} key={index + 1}>
-          <AksaraButton text={value.nama} onPress={() => navigation.push('DetailAksara', value)}/>
+          <AksaraButton text={value.nama} onPress={() => navigation.navigate('DetailAksara', value)}/>
         </View>
       );
     });
@@ -26,7 +26,7 @@ const AksaraLanPasangan = ({ navigation }) => {
     return askaraDatasawala.map((value, index) => {
       return (
         <View style={styles.container} key={index + 1}>
-          <AksaraButton text={value.nama} onPress={() => navigation.push('DetailAksara', value)}/>
+          <AksaraButton text={value.nama} onPress={() => navigation.navigate('DetailAksara', value)}/>
         </View>
       )
     })
@@ -35,7 +35,7 @@ const AksaraLanPasangan = ({ navigation }) => {
     return askaraPadhajayanya.map((value, index) => {
       return (
         <View style={styles.container} key={index + 1}>
-          <AksaraButton text={value.nama} onPress={() => navigation.push('DetailAksara', value)}/>
+          <AksaraButton text={value.nama} onPress={() => navigation.navigate('DetailAksara', value)}/>
         </View>
       )
     })
@@ -44,7 +44,7 @@ const AksaraLanPasangan = ({ navigation }) => {
     return askaraMagabathanga.map((value, index) => {
       return (
         <View style={styles.container} key={index + 1}>
-          <AksaraButton text={value.nama} onPress={() => navigation.push('DetailAksara', value)}/>
+          <AksaraButton text={value.nama} onPress={() => navigation.navigate('DetailAksara', value)}/>
         </View>
       )
     })
@@ -53,7 +53,7 @@ const AksaraLanPasangan = ({ navigation }) => {
 
   return (
     <View style={globalStyles.container}>
-      <CircleIcon name='home' onPress={() => navigation.push('Menu')} />
+      <CircleIcon name='home' onPress={() => navigation.navigate('Menu')} />
       <View style={globalStyles.centerContainer}>
         <Text style={styles.headingText}>Aksara Jawa Lan Pasangan</Text>
         <View style={styles.historyContainer}>
@@ -75,7 +75,7 @@ const AksaraLanPasangan = ({ navigation }) => {
         </View>
       </View>
       <View style={{ marginTop: 30, marginLeft: 250 }}>
-        <CircleIcon name='arrow-left' onPress={() => navigation.push('Learn')} />
+        <CircleIcon name='arrow-left' onPress={() => navigation.navigate('Learn')} />
       </View>
     </View>
   );

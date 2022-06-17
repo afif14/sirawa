@@ -1,23 +1,25 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, ImageBackground } from 'react-native';
 import CircleIcon from '../../components/circleIcon';
 import { globalStyles } from '../../styles/global';
 
 const Story = ({ navigation }) => {
 
   return (
+    <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ { width: '100%', height: '100%' } }>
     <View style={globalStyles.container}>
       <View style={globalStyles.centerContainer}>
         <Text style={styles.headingText}>niki lo sejarah aksara Jawi</Text>
         <View style={styles.historyContainer}>
           <ScrollView>
             <Text style={styles.historyText}>
-              Kawitan ana siji nom-noman kaaran Ajisaka lan loro punggawane kaaran Dhora lan Sembadha kang arep lunga ngumbara. 
-              Pas tekan ing Pulo Majethi, Ajisaka titip siji keris marang Sembadha karo amanat ora oleh menehake Keris Pusaka kasebut menyang wong liya saliyane Ajisaka dhewe kang sing jupuk. 
-              Sawise iku, Ajisaka lan Dhora lanjut ngumbara menyang Nagara Madhangkamulan. ing Nagara kasebut ana siji prabu kang remen mangan daging manungsa nganti diwedeni dening masarakat kang kaaran Prabu Dewata Cengkar. 
-              Sawise Ajisaka menang nglawan Prabu Dewata Cengkar, Ajisaka dadi raja ing nagara kasebut. Ora suwe sawise kuwi, Ajisaka kelingan keris pusaka kang digawa dening Sembadha lan banjur ngutus Dhora kanggo jupuk keris. 
-              Nanging, Dhora lan Sembadha ora tau bali amarga wis tarung dhuwuring kekuwatan pendapat dhewe-dhewe kang diwenehake dening Ajisaka. Nganti dheweke kabeh tiwas dhuwur pertempuran kasebut. Ajisaka lunga menyang Pulo Majethi kaping loro punggawane tempur lan piyambake uga nyesel banget dhuwur ketledhorane.
-              Prastawa kasebut nggawe Ajisaka nyiptakake aksara kang muni : {"\n"}
+              Kawitan ana siji nom-noman kaaran Ajisaka lan loro punggawane kaaran Dhora lan Sembadha kang arep lunga ngumbara. { "\n" }
+              Pas tekan ing Pulo Majethi, Ajisaka titip siji keris marang Sembadha karo amanat ora oleh menehake Keris Pusaka kasebut menyang wong liya saliyane Ajisaka dhewe kang sing jupuk. { "\n" }
+              Sawise iku, Ajisaka lan Dhora lanjut ngumbara menyang Nagara Madhangkamulan. ing Nagara kasebut ana siji prabu kang remen mangan daging manungsa nganti diwedeni dening masarakat kang kaaran Prabu Dewata Cengkar. { "\n" }
+              Sawise Ajisaka menang nglawan Prabu Dewata Cengkar, Ajisaka dadi raja ing nagara kasebut. Ora suwe sawise kuwi, Ajisaka kelingan keris pusaka kang digawa dening Sembadha lan banjur ngutus Dhora kanggo jupuk keris. { "\n" }
+              Nanging, Dhora lan Sembadha ora tau bali amarga wis tarung dhuwuring kekuwatan pendapat dhewe-dhewe kang diwenehake dening Ajisaka. Nganti dheweke kabeh tiwas dhuwur pertempuran kasebut. { "\n" }
+              Ajisaka lunga menyang Pulo Majethi kaping loro punggawane tempur lan piyambake uga nyesel banget dhuwur ketledhorane.
+              { "\n" }Prastawa kasebut nggawe Ajisaka nyiptakake aksara kang muni : { "\n" }
               <Text style={styles.bold}>- Ha Na Ca Ra Ka</Text>  yang berarti kang ateges ana loro utusan.{"\n"}
               <Text style={styles.bold}>- Da Ta Sa Wa La</Text> kang ateges dheweke kabeh seje pendapat utawa padha - padha gelut.{"\n"}
               <Text style={styles.bold}>- Ma Ga Ba Tha Nga</Text> kang ateges dheweke kabeh berdua padha kuwate utawa saktine.{"\n"}
@@ -28,16 +30,17 @@ const Story = ({ navigation }) => {
         </View>
       </View>
       <View style={styles.arrowRight}>
-        <CircleIcon name='arrow-left' onPress={() => navigation.push('Menu')} />
+        <CircleIcon name='arrow-left' onPress={() => navigation.navigate('Menu')} />
       </View>
     </View>
+    </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
   historyContainer: {
-    width: 273,
-    height: 400,
+    width: 300,
+    height: 440,
     backgroundColor: 'white',
     borderRadius: 10,
     borderWidth: 1,
@@ -50,7 +53,7 @@ const styles = StyleSheet.create({
     width: 272,
   },
   historyText: {
-    fontSize: 14,
+    fontSize: 16,
     lineHeight: 19,
     fontWeight: '500',
     padding: 10,

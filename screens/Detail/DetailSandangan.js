@@ -8,7 +8,7 @@ const DetailSandangan = ({route, navigation}) => {
 
    return (
       <View style={ globalStyles.container }>
-         <CircleIcon name='home' onPress={() => navigation.push('Menu')} />
+         <CircleIcon name='home' onPress={() => navigation.navigate('Menu')} />
          <View style={globalStyles.centerContainer}>
             <Text style={styles.headingText}>Sandangan Aksara Jawa</Text>
             <View style={styles.historyContainer}>
@@ -30,7 +30,7 @@ const DetailSandangan = ({route, navigation}) => {
             </View>
          </View>
          <View style={ { marginTop: 30, marginLeft: 250 } }>
-            <CircleIcon name='arrow-left' onPress={ () => navigation.push('Sandangan') } />
+            <CircleIcon name='arrow-left' onPress={ () => navigation.navigate('Sandangan') } />
          </View>
       </View>
    )

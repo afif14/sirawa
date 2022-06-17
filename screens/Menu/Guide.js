@@ -5,7 +5,7 @@ import { globalStyles } from '../../styles/global';
 
 const Guide = ({ navigation }) => {
   const backToMenu = () => {
-    navigation.push('Menu');
+    navigation.navigate('Menu');
   };
 
   return (

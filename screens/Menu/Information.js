@@ -1,21 +1,22 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ImageBackground } from 'react-native';
 import CircleIcon from '../../components/circleIcon';
 import { globalStyles } from '../../styles/global';
 
 const Information = ({ navigation }) => {
   const backToMenu = () => {
-    navigation.push('Menu');
+    navigation.navigate('Menu');
   };
 
   return (
+    <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ { width: '100%', height: '100%' } }>
     <View style={globalStyles.container}>
       <View style={globalStyles.centerContainer}>
         <Text style={styles.headingText}>Informasi Babagan Aplikasi</Text>
         <View style={styles.historyContainer}>
           <Text style={styles.historyText}>
-            Aplikasi ini dibuat dengan berlatar belakang, ingin memudahkan para
-            siswa dalam menghafal dan mengenal materi Aksara Jawa.
+            Aplikasi SiRaWa utawa Sinau Aksara Jawa ya iku medhia pasinaon interaktif adhedhasar android kang fungsi kanggo nggampangake para siswa jroning proses ngapal lan kenal materi aksara jawa.
+            { "\n" }Karo anane medhia pasinaon iki, muga-muga manfaat lan bisa ngrewangi guru lan siswa jroning proses belajar-mengajar.
           </Text>
         </View>
       </View>
@@ -23,6 +24,7 @@ const Information = ({ navigation }) => {
         <CircleIcon name='arrow-left' onPress={backToMenu} />
       </View>
     </View>
+    </ImageBackground>
   );
 };
 

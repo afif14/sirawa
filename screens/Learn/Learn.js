@@ -1,26 +1,29 @@
 import React from 'react';
 import { globalStyles } from '../../styles/global';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ImageBackground } from 'react-native';
 import { FlatButton } from '../../components/button';
 import CircleIcon from '../../components/circleIcon';
 import { normalize } from '../../utils/normalize'
 
 const Menu = ({ navigation }) => {
   return (
+    <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ { width: '100%', height: '100%' } }>
     <View style={globalStyles.container}>
       <Text style={styles.textMenu}>Sampeyan pengin sinau opo?</Text>
       <View style={styles.heightMenu}>
         <FlatButton
+          style={ globalStyles.button }
           text='Aksara Jawa Lan Pasangan'
-          onPress={() => navigation.push('AksaraLanPasangan')}
+          onPress={() => navigation.navigate('AksaraLanPasangan')}
         />
-        <FlatButton text='Sandangan' onPress={() => navigation.push('Sandangan')} />
-        <FlatButton text='Aksara Swara' onPress={() =>  navigation.push('AksaraSwara')} />
+        <FlatButton text='Sandangan' style={ globalStyles.button } onPress={() => navigation.navigate('Sandangan')} />
+        <FlatButton text='Aksara Swara' style={ globalStyles.button } onPress={() =>  navigation.navigate('AksaraSwara')} />
       </View>
       <View style={styles.iconBottomContainer}>
-        <CircleIcon name='arrow-left' onPress={() => navigation.push('Menu')} />
+        <CircleIcon name='arrow-left' onPress={() => navigation.navigate('Menu')} />
       </View>
     </View>
+    </ImageBackground>
   );
 };
 

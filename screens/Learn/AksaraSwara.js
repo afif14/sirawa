@@ -12,7 +12,7 @@ const AksaraSwara = ({ navigation }) => {
     return aksara.map((value, index) => {
       return (
         <View style={styles.container} key={index + 1}>
-          <AksaraButton text={value.nama} onPress={() => navigation.push('DetailSwara', value)}/>
+          <AksaraButton text={value.nama} onPress={() => navigation.navigate('DetailSwara', value)}/>
         </View>
       );
     });
@@ -20,7 +20,7 @@ const AksaraSwara = ({ navigation }) => {
 
   return (
     <View style={globalStyles.container}>
-      <CircleIcon name='home' onPress={() => navigation.push('Menu')} />
+      <CircleIcon name='home' onPress={() => navigation.navigate('Menu')} />
       <View style={globalStyles.centerContainer}>
         <Text style={styles.headingText}>Aksara Swara</Text>
         <View style={styles.historyContainer}>
@@ -36,7 +36,7 @@ const AksaraSwara = ({ navigation }) => {
         </View>
       </View>
       <View style={{ marginTop: 30, marginLeft: 250 }}>
-        <CircleIcon name='arrow-left' onPress={() => navigation.push('Learn')} />
+        <CircleIcon name='arrow-left' onPress={() => navigation.navigate('Learn')} />
       </View>
     </View>
   );

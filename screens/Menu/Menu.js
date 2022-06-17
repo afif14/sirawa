@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { globalStyles } from '../../styles/global';
-import { View, Text, StyleSheet, BackHandler, Alert } from 'react-native';
+import { View, Text, StyleSheet, BackHandler, Alert, ImageBackground } from 'react-native';
 import { FlatButton } from '../../components/button';
 import CircleIcon from '../../components/circleIcon';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -38,24 +38,26 @@ const Menu = ({ navigation }) => {
   };
 
   return (
+    <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ { width: '100%', height: '100%' } }>
     <View style={globalStyles.container}>
       <View style={styles.iconContainer}>
-        <CircleIcon name='exclamation' onPress={() => navigation.push('Information')} />
-        <CircleIcon name='question' onPress={() => navigation.push('Guide')} />
-        <CircleIcon name='trophy' />
+        <CircleIcon name='exclamation' onPress={() => navigation.navigate('Information')} />
+        <CircleIcon name='question' onPress={() => navigation.navigate('Guide')} />
+        <CircleIcon name='trophy' onPress={() => navigation.navigate('ScreenNilai')} />
       </View>
       <Text style={styles.textMenu}>Sugeng Rawuh, {name}</Text>
       <View style={styles.heightMenu}>
-        <FlatButton text='Sejarah Aksara Jawi' onPress={() => navigation.push('Story')} />
-        <FlatButton text='Sinau Aksara Jawi' onPress={() => navigation.push('Learn')} />
-        <FlatButton text='apalan gelis ala bu lilik' onPress={() => navigation.push('ApalanCepet')}/>
-        <FlatButton text='latian aksara Jawi' />
+        <FlatButton text='Sejarah Aksara Jawi' style={globalStyles.button} onPress={() => navigation.navigate('Story')} />
+          <FlatButton text='Sinau Aksara Jawi' style={ globalStyles.button } onPress={() => navigation.navigate('Learn')} />
+          <FlatButton text='apalan gelis ala bu lilik' style={ globalStyles.button } onPress={() => navigation.navigate('ApalanCepet')}/>
+          <FlatButton text='latian aksara Jawi' style={ globalStyles.button } onPress={() => navigation.navigate('LatihanSoal')}/>
       </View>
       <View style={styles.iconBottomContainer}>
         <CircleIcon name='volume-up' />
         <CircleIcon name='sign-out' onPress={Exit} />
       </View>
     </View>
+    </ImageBackground>
   );
 };
 

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Text, View, TextInput, StyleSheet, Alert } from 'react-native';
+import { Text, View, TextInput, StyleSheet, Alert, ImageBackground } from 'react-native';
 import { FlatButton } from '../components/button';
 import { globalStyles } from '../styles/global';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -27,6 +27,7 @@ export default function Login({ navigation }) {
   };
 
   return (
+    <ImageBackground source={require('../assets/images/BG-1.png')} style={{width: '100%', height: '100%'}}>
     <View style={globalStyles.container}>
       <Text style={globalStyles.textMd}>Mlebet riyen</Text>
       <View>
@@ -43,10 +44,10 @@ export default function Login({ navigation }) {
           style={styles.input}
           onChangeText={value => setAbsen(value)}
         />
-        <FlatButton text='mlebet' style={styles.marginTop} onPress={pressHandler} />
       </View>
-      {/* <Text style={styles.textBottom} onPress={() => navigation.navigate('register')}>Sampun gadhah akun? Registrasi</Text> */}
+        <FlatButton text='mlebet' style={ styles.buttonLogin } onPress={ pressHandler } />
     </View>
+    </ImageBackground>
   );
 }
 
@@ -66,5 +67,14 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 20,
     textAlign: 'center'
+  },
+  buttonLogin: {
+    borderRadius: 30,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    marginTop: 40,
+    backgroundColor: '#8E806A',
+    marginVertical: 10,
+    color: 'white'
   }
 })

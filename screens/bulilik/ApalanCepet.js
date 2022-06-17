@@ -63,7 +63,7 @@ const Taling = ({ navigation }) => {
 
    return (
       <View style={ globalStyles.container }>
-         <CircleIcon name='home' onPress={ () => navigation.push('Menu') } />
+         <CircleIcon name='home' onPress={ () => navigation.navigate('Menu') } />
          <View style={ globalStyles.centerContainer }>
             <Text style={ styles.headingText }>Sandangan Aksara Swara</Text>
          </View>
@@ -79,7 +79,7 @@ const Taling = ({ navigation }) => {
             </View>
          </Slick>
          <View style={ { marginTop: 30, marginLeft: 250 } }>
-            <CircleIcon name='arrow-left' onPress={ () => navigation.push('Learn') } />
+            <CircleIcon name='arrow-left' onPress={ () => navigation.navigate('Menu') } />
          </View>
       </View>
    )
