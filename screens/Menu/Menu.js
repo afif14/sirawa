@@ -5,9 +5,31 @@ import { FlatButton } from '../../components/button';
 import CircleIcon from '../../components/circleIcon';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { normalize } from '../../utils/normalize'
+import { Audio } from 'expo-av';
 
 const Menu = ({ navigation }) => {
   const [name, setName] = useState('')
+  const [sound, setSound] = useState();
+
+  async function playSound() {
+    console.log('Loading Sound')
+    const { sound } = await Audio.Sound.createAsync(
+      require('../../assets/song/backsound.mpeg')
+    )
+    setSound(sound)
+
+    console.log('Playing Sound')
+    await sound.playAsync()
+  }
+
+  useEffect(() => {
+    return sound
+      ? () => {
+        console.log('Unloading Sound')
+        sound.unloadAsync()
+      }
+      : undefined
+  }, [sound]);
 
   useEffect(() => {
     getData()
@@ -53,7 +75,7 @@ const Menu = ({ navigation }) => {
           <FlatButton text='latian aksara Jawi' style={ globalStyles.button } onPress={() => navigation.navigate('LatihanSoal')}/>
       </View>
       <View style={styles.iconBottomContainer}>
-        <CircleIcon name='volume-up' />
+        <CircleIcon name='volume-up' onPress={playSound}/>
         <CircleIcon name='sign-out' onPress={Exit} />
       </View>
     </View>

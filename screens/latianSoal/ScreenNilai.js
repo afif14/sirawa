@@ -168,7 +168,8 @@ const styles = StyleSheet.create({
    },
    textScore:{
       fontSize: 144,
-      textAlign: 'center'
+      textAlign: 'center',
+      fontWeight: 'bold'
    }
 })
 

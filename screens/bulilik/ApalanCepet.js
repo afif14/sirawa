@@ -1,8 +1,9 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import React, { useState, useRef } from 'react'
+import { Text, View, Button } from 'react-native'
 import Slick from 'react-native-slick'
 import { globalStyles } from '../../styles/global'
 import CircleIcon from '../../components/circleIcon'
+import { Video, AVPlaybackStatus } from 'expo-av'
 
 var styles = {
 
@@ -18,14 +19,12 @@ var styles = {
    },
    slide1: {
       width: 273,
-      height: 407,
+      height: 325,
       backgroundColor: 'white',
       borderRadius: 10,
       borderWidth: 1,
-      paddingHorizontal: 15,
       marginLeft: 'auto',
       marginRight: 'auto',
-      marginTop: 'auto',
       marginBottom: 'auto'
    },
    slide2: {
@@ -42,11 +41,10 @@ var styles = {
    },
    slide3: {
       width: 273,
-      height: 407,
+      height: 450,
       backgroundColor: 'white',
       borderRadius: 10,
       borderWidth: 1,
-      paddingHorizontal: 15,
       marginLeft: 'auto',
       marginRight: 'auto',
       marginTop: 'auto',
@@ -60,23 +58,63 @@ var styles = {
 }
 
 const Taling = ({ navigation }) => {
+   const video = useRef(null)
+   const [status, setStatus] = useState({})
 
    return (
       <View style={ globalStyles.container }>
          <CircleIcon name='home' onPress={ () => navigation.navigate('Menu') } />
          <View style={ globalStyles.centerContainer }>
-            <Text style={ styles.headingText }>Sandangan Aksara Swara</Text>
+            <Text style={ styles.headingText }>Apalan Cepet Ala Bu Lilik</Text>
          </View>
 
-         <Slick style={ styles.wrapper } showsPagination={ false } buttonWrapperStyle={ styles.buttonStyle } loop={ false }>
-            <View testID="Hello" style={ styles.slide1 }>
-            </View>
-            <View testID="Beautiful" style={ styles.slide2 }>
-               <Text style={ styles.text }>Beautiful</Text>
-            </View>
-            <View testID="Simple" style={ styles.slide3 }>
-               <Text style={ styles.text }>And simple</Text>
-            </View>
+         <Slick loop={ false }>
+
+            <Video
+               ref={ video }
+               style={ styles.slide1 }
+               source={ require('../../assets/video/Halakadana.mp4') }
+               useNativeControls
+               resizeMode="contain"
+               isLooping
+               onPlaybackStatusUpdate={ status => setStatus(() => status) }
+            />
+            <Video
+               ref={ video }
+               style={ styles.slide1 }
+               source={ require('../../assets/video/Casawadha.mp4') }
+               useNativeControls
+               resizeMode="contain"
+               isLooping
+               onPlaybackStatusUpdate={ status => setStatus(() => status) }
+            />
+            <Video
+               ref={ video }
+               style={ styles.slide1 }
+               source={ require('../../assets/video/Ragapaya.mp4') }
+               useNativeControls
+               resizeMode="contain"
+               isLooping
+               onPlaybackStatusUpdate={ status => setStatus(() => status) }
+            />
+            <Video
+               ref={ video }
+               style={ styles.slide1 }
+               source={ require('../../assets/video/Ngabanyatha.mp4') }
+               useNativeControls
+               resizeMode="contain"
+               isLooping
+               onPlaybackStatusUpdate={ status => setStatus(() => status) }
+            />
+            <Video
+               ref={ video }
+               style={ styles.slide1 }
+               source={ require('../../assets/video/Tajama.mp4') }
+               useNativeControls
+               resizeMode="contain"
+               isLooping
+               onPlaybackStatusUpdate={ status => setStatus(() => status) }
+            />
          </Slick>
          <View style={ { marginTop: 30, marginLeft: 250 } }>
             <CircleIcon name='arrow-left' onPress={ () => navigation.navigate('Menu') } />
