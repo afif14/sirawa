@@ -37,7 +37,7 @@ const Sandangan = ({ navigation }) => {
 const styles = StyleSheet.create({
   historyContainer: {
     width: 273,
-    height: 415 ,
+    height: 455 ,
     backgroundColor: 'white',
     borderRadius: 10,
     borderWidth: 1,

@@ -14,12 +14,20 @@ const Menu = ({ navigation }) => {
   async function playSound() {
     console.log('Loading Sound')
     const { sound } = await Audio.Sound.createAsync(
-      require('../../assets/song/backsound.mpeg')
+      require('../../assets/song/backsound.mp3')
     )
     setSound(sound)
 
     console.log('Playing Sound')
     await sound.playAsync()
+    try {
+      const result = await sound.current.getStatusAsync()
+      if (result.isLoaded) {
+        if (result.isPlaying === false) {
+          sound.current.playAsync()
+        }
+      }
+    } catch (error) { }
   }
 
   useEffect(() => {
@@ -69,13 +77,13 @@ const Menu = ({ navigation }) => {
       </View>
       <Text style={styles.textMenu}>Sugeng Rawuh, {name}</Text>
       <View style={styles.heightMenu}>
-        <FlatButton text='Sejarah Aksara Jawi' style={globalStyles.button} onPress={() => navigation.navigate('Story')} />
-          <FlatButton text='Sinau Aksara Jawi' style={ globalStyles.button } onPress={() => navigation.navigate('Learn')} />
+        <FlatButton text='Sejarah Aksara Jawa' style={globalStyles.button} onPress={() => navigation.navigate('Story')} />
+          <FlatButton text='Sinau Aksara Jawa' style={ globalStyles.button } onPress={() => navigation.navigate('Learn')} />
           <FlatButton text='apalan gelis ala bu lilik' style={ globalStyles.button } onPress={() => navigation.navigate('ApalanCepet')}/>
           <FlatButton text='latian aksara Jawi' style={ globalStyles.button } onPress={() => navigation.navigate('LatihanSoal')}/>
       </View>
       <View style={styles.iconBottomContainer}>
-        <CircleIcon name='volume-up' onPress={playSound}/>
+        <CircleIcon name={sound ? 'volume-up' : 'volume-off'} onPress={playSound}/>
         <CircleIcon name='sign-out' onPress={Exit} />
       </View>
     </View>

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { Text, View, Button } from 'react-native'
+import { Text, View, ImageBackground } from 'react-native'
 import Slick from 'react-native-slick'
 import { globalStyles } from '../../styles/global'
 import CircleIcon from '../../components/circleIcon'
@@ -13,6 +13,7 @@ var styles = {
       lineHeight: 42,
       width: 272,
       textAlign: 'center',
+      color: '#EAC28F'
    },
    buttonStyle: {
       fontSize: 'bold'
@@ -20,7 +21,7 @@ var styles = {
    slide1: {
       width: 273,
       height: 325,
-      backgroundColor: 'white',
+      backgroundColor: 'black',
       borderRadius: 10,
       borderWidth: 1,
       marginLeft: 'auto',
@@ -62,6 +63,7 @@ const Taling = ({ navigation }) => {
    const [status, setStatus] = useState({})
 
    return (
+      <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ { width: '100%', height: '100%' } }>
       <View style={ globalStyles.container }>
          <CircleIcon name='home' onPress={ () => navigation.navigate('Menu') } />
          <View style={ globalStyles.centerContainer }>
@@ -120,6 +122,7 @@ const Taling = ({ navigation }) => {
             <CircleIcon name='arrow-left' onPress={ () => navigation.navigate('Menu') } />
          </View>
       </View>
+      </ImageBackground>
    )
 
 }
