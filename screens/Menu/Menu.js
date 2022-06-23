@@ -60,12 +60,12 @@ const Menu = ({ navigation }) => {
   };
 
   return (
-    <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ { width: '100%', height: '100%' } }>
+    <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ styles.styleBackground}>
     <View style={globalStyles.container}>
       <View style={styles.iconContainer}>
-        <CircleIcon name='exclamation' onPress={() => navigation.navigate('Information')} />
+          <CircleIcon name='star' onPress={ () => navigation.navigate('ScreenNilai')} />
+          <CircleIcon name='info' onPress={ () => navigation.navigate('Information')} />
         <CircleIcon name='question' onPress={() => navigation.navigate('Guide')} />
-        <CircleIcon name='trophy' onPress={() => navigation.navigate('ScreenNilai')} />
       </View>
       <Text style={styles.textMenu}>Sugeng Rawuh, {name}</Text>
       <View style={styles.heightMenu}>
@@ -84,6 +84,10 @@ const Menu = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  styleBackground:{
+    display: 'flex',
+    flex: 1
+  },
   heightMenu: {
     height: 70,
   },
@@ -92,9 +96,11 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     marginTop: 100,
+    color:'#EAC28F'
   },
   iconContainer: {
-    flexDirection: 'row-reverse',
+    flexDirection: 'row',
+    justifyContent: 'flex-end'
   },
   iconBottomContainer: {
     marginTop: 280,

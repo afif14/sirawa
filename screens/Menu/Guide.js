@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ImageBackground} from 'react-native';
 import CircleIcon from '../../components/circleIcon';
 import { globalStyles } from '../../styles/global';
 
@@ -9,6 +9,7 @@ const Guide = ({ navigation }) => {
   };
 
   return (
+    <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ styles.styleBackground}>
     <View style={globalStyles.container}>
       <View style={globalStyles.centerContainer}>
         <Text style={styles.headingText}>Petunjuk Nggunaake Aplikasi</Text>
@@ -22,6 +23,7 @@ const Guide = ({ navigation }) => {
         <CircleIcon name='arrow-left' onPress={backToMenu} />
       </View>
     </View>
+    </ImageBackground>
   );
 };
 
@@ -39,6 +41,7 @@ const styles = StyleSheet.create({
     lineHeight: 42,
     marginVertical: 30,
     width: 272,
+    color: '#EAC28F'
   },
   historyText: {
     fontSize: 14,
@@ -46,6 +49,10 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     padding: 10,
     fontFamily: 'roboto-reguler',
+  },
+  styleBackground: {
+    display: 'flex',
+    flex: 1
   },
 });
 

@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
    },
    textTuladha: {
       marginVertical: 10,
-      fontSize: normalize(15)
+      fontSize: normalize(20)
    },
    containerContoh: {
       maxHeight: 170,
@@ -93,12 +93,14 @@ const styles = StyleSheet.create({
    textContoh: {
       fontSize: normalize(25),
       fontWeight: '600',
-      textAlign: 'center'
+      textAlign: 'center',
+      paddingBottom: 10
    },
    textArti: {
       fontSize: normalize(20),
       fontWeight: 'bold',
-      textAlign: 'center'
+      textAlign: 'center',
+      marginVertical: 10,
    }
 })
 

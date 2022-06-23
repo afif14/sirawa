@@ -153,11 +153,12 @@ const styles = StyleSheet.create({
       borderWidth: 1,
    },
    headingText: {
-      fontSize: 28,
+      fontSize: 30,
       fontFamily: 'roboto-bold',
       lineHeight: 42,
       marginVertical: 30,
       width: 272,
+      color: '#EAC28F'
    },
    historyText: {
       fontSize: 14,

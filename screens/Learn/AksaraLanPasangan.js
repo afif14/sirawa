@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ImageBackground } from 'react-native';
 import { AksaraButton } from '../../components/aksaraButton';
 import Slick from 'react-native-slick';
 import CircleIcon from '../../components/circleIcon';
@@ -52,6 +52,7 @@ const AksaraLanPasangan = ({ navigation }) => {
   
 
   return (
+    <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ { width: '100%', height: '100%' } }>
     <View style={globalStyles.container}>
       <CircleIcon name='home' onPress={() => navigation.navigate('Menu')} />
       <View style={globalStyles.centerContainer}>
@@ -78,6 +79,7 @@ const AksaraLanPasangan = ({ navigation }) => {
         <CircleIcon name='arrow-left' onPress={() => navigation.navigate('Learn')} />
       </View>
     </View>
+    </ImageBackground>
   );
 };
 
@@ -115,7 +117,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   textKeterangan: {
-    fontSize: normalize(14),
+    fontSize: normalize(17),
     fontWeight: '600'
   },
   buttonWrapper: {

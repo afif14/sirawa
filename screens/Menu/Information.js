@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     lineHeight: 42,
     marginVertical: 30,
     width: 272,
+    color: '#EAC28F'
   },
   historyText: {
     fontSize: 14,

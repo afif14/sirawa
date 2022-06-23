@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 60,
     marginTop: 100,
+    color: '#EAC28F'
   },
   iconBottomContainer: {
     marginTop: 250,

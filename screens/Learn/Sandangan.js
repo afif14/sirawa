@@ -1,10 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ImageBackground } from 'react-native';
 import { FlatButton } from '../../components/button';
 import CircleIcon from '../../components/circleIcon';
 import { globalStyles } from '../../styles/global';
 import data from '../../json/sandangan.json';
-import {ratioHeight, ratioWidth} from '../../styles/metric'
 
 const Sandangan = ({ navigation }) => {
   const sandangan = data.sandangan;
@@ -13,13 +12,14 @@ const Sandangan = ({ navigation }) => {
     return sandangan.map((value, index) => {
       return (
         <View style={styles.buttonContainer} key={index + 1}>
-          <FlatButton text={ value.nama } style={ globalStyles.button } onPress={() => navigation.navigate('DetailSandangan', value)}/>
+          <FlatButton text={ value.nama } style={ styles.sandanganButton } onPress={() => navigation.navigate('DetailSandangan', value)}/>
         </View>
       );
     });
   };
 
   return (
+    <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ { width: '100%', height: '100%' } }>
     <View style={globalStyles.container}>
       <CircleIcon name='home' onPress={() => navigation.navigate('Menu') } />
       <View style={globalStyles.centerContainer}>
@@ -30,13 +30,14 @@ const Sandangan = ({ navigation }) => {
         <CircleIcon name='arrow-left' onPress={() => navigation.navigate('Learn') } />
       </View>
     </View>
+    </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
   historyContainer: {
-    width: 273 + ratioWidth,
-    height: 455 + ratioHeight,
+    width: 273,
+    height: 415 ,
     backgroundColor: 'white',
     borderRadius: 10,
     borderWidth: 1,
@@ -45,9 +46,9 @@ const styles = StyleSheet.create({
   headingText: {
     fontSize: 28,
     fontFamily: 'roboto-bold',
-    lineHeight: 42,
-    width: 272 + ratioWidth,
+    width: 272,
     textAlign: 'center',
+    color: '#EAC28F'
   },
   historyText: {
     fontSize: 14,
@@ -59,6 +60,22 @@ const styles = StyleSheet.create({
   buttonContainer: {
     paddingHorizontal: 15,
   },
+  sandanganButton:{
+    borderRadius: 20,
+    paddingVertical: 9,
+    paddingHorizontal: 34,
+    marginTop: 8,
+    backgroundColor: '#8E806A',
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
+  }
 });
 
 export default Sandangan;

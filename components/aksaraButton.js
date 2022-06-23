@@ -19,7 +19,15 @@ const styles = StyleSheet.create({
     height: 60,
     marginTop: 8,
     backgroundColor: '#c4c4c4',
-    display: 'flex',
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
   },
   buttonText: {
     color: 'black',

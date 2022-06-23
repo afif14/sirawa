@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   keterangan: {
-    fontSize: 14,
+    fontSize: 15,
     fontWeight: '600',
     lineHeight: 21,
     marginBottom: 10,

@@ -10,12 +10,11 @@ export default function Login({ navigation }) {
 
   const setData = async () => {
     if(name.length == 0 && absen.length == 0){
-      Alert.alert('Mirengan!', 'tulung isi data riyen')
+      Alert.alert('Mirengan!', 'Tulung tulis jenengmu ya, ben server iso srawung kowe')
     } else {
       try {
         await AsyncStorage.setItem('userName', name)
-        await AsyncStorage.setItem('absensi', absen)
-        navigation.navigate('Menu')
+        navigation.replace('Menu')
       } catch (error) {
         console.log(error)
       }
@@ -36,13 +35,6 @@ export default function Login({ navigation }) {
           value={name}
           style={styles.input}
           onChangeText={value => setName(value)}
-        />
-        <TextInput
-          keyboard='number'
-          placeholder='Absen'
-          value={absen}
-          style={styles.input}
-          onChangeText={value => setAbsen(value)}
         />
       </View>
         <FlatButton text='mlebet' style={ styles.buttonLogin } onPress={ pressHandler } />
