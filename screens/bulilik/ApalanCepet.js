@@ -3,7 +3,8 @@ import { Text, View, ImageBackground } from 'react-native'
 import Slick from 'react-native-slick'
 import { globalStyles } from '../../styles/global'
 import CircleIcon from '../../components/circleIcon'
-import { Video, AVPlaybackStatus } from 'expo-av'
+import { Video, Audio } from 'expo-av'
+import { useEffect } from 'react'
 
 var styles = {
 
@@ -64,64 +65,63 @@ const Taling = ({ navigation }) => {
 
    return (
       <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ { width: '100%', height: '100%' } }>
-      <View style={ globalStyles.container }>
-         <CircleIcon name='home' onPress={ () => navigation.navigate('Menu') } />
-         <View style={ globalStyles.centerContainer }>
-            <Text style={ styles.headingText }>Apalan Cepet Ala Bu Lilik</Text>
-         </View>
+         <View style={ globalStyles.container }>
+            <CircleIcon name='home' onPress={ () => navigation.navigate('Menu') } />
+            <View style={ globalStyles.centerContainer }>
+               <Text style={ styles.headingText }>Apalan Cepet Ala Bu Lilik</Text>
+            </View>
 
-         <Slick loop={ false }>
-
-            <Video
-               ref={ video }
-               style={ styles.slide1 }
-               source={ require('../../assets/video/Halakadana.mp4') }
-               useNativeControls
-               resizeMode="contain"
-               isLooping
-               onPlaybackStatusUpdate={ status => setStatus(() => status) }
-            />
-            <Video
-               ref={ video }
-               style={ styles.slide1 }
-               source={ require('../../assets/video/Casawadha.mp4') }
-               useNativeControls
-               resizeMode="contain"
-               isLooping
-               onPlaybackStatusUpdate={ status => setStatus(() => status) }
-            />
-            <Video
-               ref={ video }
-               style={ styles.slide1 }
-               source={ require('../../assets/video/Ragapaya.mp4') }
-               useNativeControls
-               resizeMode="contain"
-               isLooping
-               onPlaybackStatusUpdate={ status => setStatus(() => status) }
-            />
-            <Video
-               ref={ video }
-               style={ styles.slide1 }
-               source={ require('../../assets/video/Ngabanyatha.mp4') }
-               useNativeControls
-               resizeMode="contain"
-               isLooping
-               onPlaybackStatusUpdate={ status => setStatus(() => status) }
-            />
-            <Video
-               ref={ video }
-               style={ styles.slide1 }
-               source={ require('../../assets/video/Tajama.mp4') }
-               useNativeControls
-               resizeMode="contain"
-               isLooping
-               onPlaybackStatusUpdate={ status => setStatus(() => status) }
-            />
-         </Slick>
-         <View style={ { marginTop: 30, marginLeft: 250 } }>
-            <CircleIcon name='arrow-left' onPress={ () => navigation.navigate('Menu') } />
+            <Slick loop={ false }>
+               <Video
+                  ref={ video }
+                  style={ styles.slide1 }
+                  source={ require('../../assets/video/Halakadana.mp4') }
+                  useNativeControls
+                  resizeMode="contain"
+                  isLooping
+                  onPlaybackStatusUpdate={ status => setStatus(() => status) }
+               />
+               <Video
+                  ref={ video }
+                  style={ styles.slide1 }
+                  source={ require('../../assets/video/Casawadha.mp4') }
+                  useNativeControls
+                  resizeMode="contain"
+                  isLooping
+                  onPlaybackStatusUpdate={ status => setStatus(() => status) }
+               />
+               <Video
+                  ref={ video }
+                  style={ styles.slide1 }
+                  source={ require('../../assets/video/Ragapaya.mp4') }
+                  useNativeControls
+                  resizeMode="contain"
+                  isLooping
+                  onPlaybackStatusUpdate={ status => setStatus(() => status) }
+               />
+               <Video
+                  ref={ video }
+                  style={ styles.slide1 }
+                  source={ require('../../assets/video/Ngabanyatha.mp4') }
+                  useNativeControls
+                  resizeMode="contain"
+                  isLooping
+                  onPlaybackStatusUpdate={ status => setStatus(() => status) }
+               />
+               <Video
+                  ref={ video }
+                  style={ styles.slide1 }
+                  source={ require('../../assets/video/Tajama.mp4') }
+                  useNativeControls
+                  resizeMode="contain"
+                  isLooping
+                  onPlaybackStatusUpdate={ status => setStatus(() => status) }
+               />
+            </Slick>
+            <View style={ { marginTop: 30, marginLeft: 250 } }>
+               <CircleIcon name='arrow-left' onPress={ () => navigation.navigate('Menu') } />
+            </View>
          </View>
-      </View>
       </ImageBackground>
    )
 

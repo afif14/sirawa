@@ -6,6 +6,7 @@ import { globalStyles } from '../../styles/global'
 import { normalize } from '../../utils/normalize'
 import RadioButtonRN from 'radio-buttons-react-native-expo'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import { tingkat1, tingkat2, tingkat3, tingkat4 } from '../../utils/soal'
 
 const ScreenSoal = ({ route, navigation }) => {
    const { soal, level } = route.params
@@ -29,23 +30,35 @@ const ScreenSoal = ({ route, navigation }) => {
          JSON.parse(isAnswer).map((el) => {
             if (el.level == level) {
                setIsianUser(prevState => {
-                  return [...prevState, {jawabanUser: el.jawabanUser, id: el.id}]
+                  return [...prevState, { jawabanUser: el.jawabanUser, id: el.id }]
                })
             }
          })
       }
    }
    useEffect(() => {
-         cekJawaban()
+      cekJawaban()
    }, [])
+
+   const handleSoal = (level) => {
+      if (level == 1) {
+         return tingkat1
+      } else if (level == 2) {
+         return tingkat2
+      } else if (level == 3) {
+         return tingkat3
+      } else if (level == 4) {
+         return tingkat4
+      }
+   }
 
    const pilihanUser = (id, pilihanSoal, tebakanUser) => {
       let idJawaban = 0
       tebakanUser.map((value, index) => {
-         if(id == value.id) {
+         if (id == value.id) {
             pilihanSoal.map((el, i) => {
-               if(value.jawabanUser == el) {
-                  idJawaban =  i + 1
+               if (value.jawabanUser == el) {
+                  idJawaban = i + 1
                }
             })
          }
@@ -83,6 +96,16 @@ const ScreenSoal = ({ route, navigation }) => {
       }
    }
 
+   const handleArrow = (level) => {
+      if (level == 1) {
+         return `flex-end`
+      } else if (level == 4) {
+         return 'flex-start'
+      } else {
+         return 'space-between'
+      }
+   }
+
    const kumpulanSoal = () => {
       return soal.map((value, index) => {
          return (
@@ -94,7 +117,7 @@ const ScreenSoal = ({ route, navigation }) => {
                <View>
                   {/* {value.pilihan.map((value, index) => {
                      return ( */}
-                  <RadioButtonRN initial={pilihanUser(value.id, value.pilihan, isianUser)} box={ false } boxStyle={ styles.boxRadio } textStyle={ styles.textHitam }
+                  <RadioButtonRN initial={ pilihanUser(value.id, value.pilihan, isianUser) } box={ false } boxStyle={ styles.boxRadio } textStyle={ styles.textHitam }
                      data={ value.pilihan.map((element, i) => {
                         return {
                            isian: element,
@@ -115,22 +138,21 @@ const ScreenSoal = ({ route, navigation }) => {
          <View style={ { display: 'flex', flexDirection: 'row', justifyContent: 'space-between' } }>
             <CircleIcon name='home' onPress={ () => navigation.navigate('Menu') } />
             { level == 4 &&
-               <CircleIcon name='trophy' onPress={ () => {navigation.navigate('ScreenNilai') }} />
+               <CircleIcon name='star' onPress={ () => { navigation.navigate('ScreenNilai') } } />
             }
          </View>
          <View style={ globalStyles.centerContainer }>
             <Text style={ styles.headingText }>Latihan Soal</Text>
+            <Text style={ styles.headingText } t>Tingkat { level }</Text>
             <View style={ styles.historyContainer }>
                <Slick loop={ false }>
                   { kumpulanSoal() }
                </Slick>
             </View>
          </View>
-         <View style={ { marginTop: 30, marginLeft: 250 } }>
-            <CircleIcon name='arrow-left' onPress={() => {
-               initialLevel(level)
-               return navigation.navigate('LatihanSoal')
-            } } />
+         <View style={ { display: 'flex', flexDirection: 'row', justifyContent: handleArrow(level), } }>
+            { level != 1 && <CircleIcon name='arrow-left' onPress={ () => navigation.navigate('ScreenSoal', { soal: handleSoal(level - 1), level: level - 1 }) } /> }
+            { level != 4 && <CircleIcon name='arrow-right' onPress={ () => navigation.navigate('ScreenSoal', { soal: handleSoal(level + 1), level: level + 1 }) } /> }
          </View>
       </View>
    )
@@ -146,7 +168,7 @@ const styles = StyleSheet.create({
    },
    historyContainer: {
       width: 320,
-      height: 520,
+      height: 420,
       backgroundColor: 'white',
       borderRadius: 10,
       borderWidth: 1,

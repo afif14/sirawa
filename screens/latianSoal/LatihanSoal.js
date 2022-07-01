@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from 'react'
-import { Text, View, ImageBackground} from 'react-native'
+import React, { useEffect, useState } from 'react'
+import { Text, View, ImageBackground } from 'react-native'
 import { globalStyles } from '../../styles/global'
 import CircleIcon from '../../components/circleIcon'
-import {FlatButton} from '../../components/button'
-import {tingkat1, tingkat2, tingkat3, tingkat4} from '../../utils/soal'
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { FlatButton } from '../../components/button'
+import { tingkat1, tingkat2, tingkat3, tingkat4 } from '../../utils/soal'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 
 var styles = {
@@ -54,7 +54,7 @@ const LatihanSoal = ({ navigation }) => {
    useEffect(() => {
       const localLevel = async () => {
          const readLevel = await AsyncStorage.getItem('level')
-         if(readLevel){
+         if (readLevel) {
             setLevel(JSON.parse(readLevel))
          }
       }
@@ -73,28 +73,28 @@ const LatihanSoal = ({ navigation }) => {
 
    return (
       <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ { width: '100%', height: '100%' } }>
-      <View style={ globalStyles.container }>
-         <CircleIcon name='home' onPress={ () => navigation.navigate('Menu') } />
-         <View style={ globalStyles.centerContainer }>
-            <Text style={ styles.headingText }>Latihan Soal</Text>
-         </View>
-
-         <View style={ styles.slide1 }>
-            <View style={styles.containerButton}>            
-               <FlatButton text='Tingkat 1' style={globalStyles.button} onPress={() => navigation.navigate('ScreenSoal', {soal: tingkat1,
-               level: 1})}/>
-                  <FlatButton text='Tingkat 2' style={level?.tingkat2 ? globalStyles.button : styles.buttonLock} onPress={ () => navigation.navigate('ScreenSoal', { soal: tingkat2, level: 2}) }/>
-                  <FlatButton text='Tingkat 3' style={level?.tingkat3 ? globalStyles.button : styles.buttonLock } onPress={ () => navigation.navigate('ScreenSoal', { soal: tingkat3, level: 3}) }/>
-                  <FlatButton text='Tingkat 4' style={level?.tingkat4 ? globalStyles.button : styles.buttonLock } onPress={ () => navigation.navigate('ScreenSoal', { soal: tingkat4, level: 4}) }/>
+         <View style={ globalStyles.container }>
+            <CircleIcon name='home' onPress={ () => navigation.navigate('Menu') } />
+            <View style={ globalStyles.centerContainer }>
+               <Text style={ styles.headingText }>Latihan Soal</Text>
             </View>
-         </View>
-         <View style={ { marginTop: 30, marginLeft: 250 } }>
-            <CircleIcon name='arrow-left' onPress={ async () => {
+
+            <View style={ styles.slide1 }>
+               <View style={ styles.containerButton }>
+                  <FlatButton text='Tingkat 1' style={ globalStyles.button } onPress={ () => navigation.navigate('ScreenSoal', { soal: tingkat1, level: 1 }) } />
+                  <FlatButton text='Tingkat 2' style={ level?.tingkat2 ? globalStyles.button : styles.buttonLock } onPress={ () => navigation.navigate('ScreenSoal', { soal: tingkat2, level: 2 }) } />
+                  <FlatButton text='Tingkat 3' style={ level?.tingkat3 ? globalStyles.button : styles.buttonLock } onPress={ () => navigation.navigate('ScreenSoal', { soal: tingkat3, level: 3 }) } />
+                  <FlatButton text='Tingkat 4' style={ level?.tingkat4 ? globalStyles.button : styles.buttonLock } onPress={ () => navigation.navigate('ScreenSoal', { soal: tingkat4, level: 4 }) } />
+               </View>
+            </View>
+            <View style={ { marginTop: 30, marginLeft: 250 } }>
+               <CircleIcon name='arrow-left' onPress={ async () => {
                   await AsyncStorage.removeItem('jawaban')
                   await AsyncStorage.removeItem('level')
-               navigation.navigate('Menu')} } />
+                  navigation.navigate('Menu')
+               } } />
+            </View>
          </View>
-      </View>
       </ImageBackground>
    )
 
