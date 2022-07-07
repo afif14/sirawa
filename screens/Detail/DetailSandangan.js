@@ -1,38 +1,40 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, ImageBackground } from 'react-native'
 import { globalStyles } from '../../styles/global'
 import CircleIcon from '../../components/circleIcon'
 import { normalize } from '../../utils/normalize'
 
-const DetailSandangan = ({route, navigation}) => {
+const DetailSandangan = ({ route, navigation }) => {
    const data = route.params
 
    return (
-      <View style={ globalStyles.container }>
-         <CircleIcon name='home' onPress={() => navigation.navigate('Menu')} />
-         <View style={globalStyles.centerContainer}>
-            <Text style={styles.headingText}>Sandangan Aksara Jawa</Text>
-            <View style={styles.historyContainer}>
-               <View style={styles.aksaraBox}>
-                  <Text adjustsFontSizeToFit style={styles.textHeading}>{data.aksara}</Text>
-                  <Text adjustsFontSizeToFit style={styles.textArti}>{data.nama}</Text>
-               </View>
-               <Text adjustsFontSizeToFit style={styles.textTuladha}>Tuladha panganggone aksara `{data.nama}` lan pasangane</Text>
-               <View style={styles.containerContoh}>
-                  <View style={styles.boxContoh}>
-                     <Text adjustsFontSizeToFit style={styles.textArti}>{data.arti1}</Text>
-                     <Text adjustsFontSizeToFit style={styles.textContoh}>{data.contoh1}</Text>
+      <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ { width: '100%', height: '100%' } }>
+         <View style={ globalStyles.container }>
+            <CircleIcon name='home' onPress={ () => navigation.navigate('Menu') } />
+            <View style={ globalStyles.centerContainer }>
+               <Text style={ styles.headingText }>Sandangan Aksara Jawa</Text>
+               <View style={ styles.historyContainer }>
+                  <View style={ styles.aksaraBox }>
+                     <Text adjustsFontSizeToFit style={ styles.textHeading }>{ data.aksara }</Text>
+                     <Text adjustsFontSizeToFit style={ styles.textArti }>{ data.nama }</Text>
                   </View>
-                  <View style={styles.boxContoh}>
-                     <Text numberOfLines={1} adjustsFontSizeToFit style={styles.textArti}>{data.arti2}</Text>
-                     <Text adjustsFontSizeToFit style={styles.textContoh}>{data.contoh2}</Text>
+                  <Text adjustsFontSizeToFit style={ styles.textTuladha }>Tuladha panganggone aksara `{ data.nama }` lan pasangane</Text>
+                  <View style={ styles.containerContoh }>
+                     <View style={ styles.boxContoh }>
+                        <Text adjustsFontSizeToFit style={ styles.textArti }>{ data.arti1 }</Text>
+                        <Text adjustsFontSizeToFit style={ styles.textContoh }>{ data.contoh1 }</Text>
+                     </View>
+                     <View style={ styles.boxContoh }>
+                        <Text numberOfLines={ 1 } adjustsFontSizeToFit style={ styles.textArti }>{ data.arti2 }</Text>
+                        <Text adjustsFontSizeToFit style={ styles.textContoh }>{ data.contoh2 }</Text>
+                     </View>
                   </View>
                </View>
             </View>
+            <View style={ { marginTop: 30, marginLeft: 250 } }>
+               <CircleIcon name='arrow-left' onPress={ () => navigation.navigate('Sandangan') } />
+            </View>
          </View>
-         <View style={ { marginTop: 30, marginLeft: 250 } }>
-            <CircleIcon name='arrow-left' onPress={ () => navigation.navigate('Sandangan') } />
-         </View>
-      </View>
+      </ImageBackground>
    )
 }
 
