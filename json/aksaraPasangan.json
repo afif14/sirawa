@@ -3,7 +3,7 @@
         "hanacaraka": [{
             "id": 1,
             "nama": "Ha",
-            "aksara": "ꦲꦩ ",
+            "aksara": "ꦲ ꧀ꦲ ",
             "arti1": "Hama",
             "arti2": "Katon Apik",
             "contoh1": "ꦲꦩ",
@@ -19,15 +19,15 @@
         }, {
             "id": 3,
             "nama": "Ca",
-            "aksara": "ꦕ",
+            "aksara": "ꦕ    ꧀ꦕ",
             "contoh1": "ꦕꦫꦏ",
-            "contoh2": "ꦥꦚ꧀ꦕꦭ꧀",
+            "contoh2": "ꦥꦤ꧀ꦕꦭ꧀ ",
             "arti1": "Caraka",
             "arti2": "Pancal"
         }, {
             "id": 4,
             "nama": "Ra",
-            "aksara": "ꦫ ꧀ꦫ ",
+            "aksara": "ꦫ   ꧀ꦫ ",
             "contoh1": "ꦫꦩꦺ",
             "contoh2": "ꦩꦔꦤ꧀ꦫꦩ꧀ꦧꦸꦠꦤ꧀",
             "arti1": "Rame",
@@ -85,7 +85,7 @@
         "padhajayanya": [{
             "id": 1,
             "nama": "Pa",
-            "aksara": "ꦥ ꧀ꦥ꧀ꦭ",
+            "aksara": "ꦥ ꧀ꦥ",
             "contoh1": "ꦥꦮꦺꦴꦤ꧀",
             "contoh2": "ꦮꦱ꧀ꦥꦢ",
             "arti1": "Pawon",
@@ -95,7 +95,7 @@
             "nama": "Dha",
             "aksara": "ꦝ ꧀ꦝ",
             "contoh1": "ꦝꦝꦒ꧀",
-            "contoh2": "ꦏꦤ꧀ꦝꦁ",
+            "contoh2": "ꦏꦤ꧀ꦝꦁ​",
             "arti1": "Dhadhag",
             "arti2": "Lontar"
         }, {
