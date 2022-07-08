@@ -4,6 +4,7 @@ import { FlatButton } from '../../components/button';
 import CircleIcon from '../../components/circleIcon';
 import { globalStyles } from '../../styles/global';
 import data from '../../json/sandangan.json';
+import { normalize } from '../../utils/normalize';
 
 const Sandangan = ({ navigation }) => {
   const sandangan = data.sandangan;
@@ -23,7 +24,8 @@ const Sandangan = ({ navigation }) => {
     <View style={globalStyles.container}>
       <CircleIcon name='home' onPress={() => navigation.navigate('Menu') } />
       <View style={globalStyles.centerContainer}>
-        <Text style={styles.headingText}>Sandangan Aksara Jawa</Text>
+        <Text style={styles.textMenu}>Sandangan</Text>
+        <Text style={styles.textMenuSecond}>Aksara Jawa</Text>
         <View style={styles.historyContainer}>{list()}</View>
       </View>
       <View style={{ marginTop: 30, marginLeft: 250 }}>
@@ -75,7 +77,26 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
 
     elevation: 5,
-  }
+  },
+  textMenu: {
+    fontSize: normalize(40),
+    fontWeight: 'bold',
+    textAlign: 'left',
+    marginTop: 20,
+    marginLeft: 20,
+    color: '#EA855B',
+    fontFamily: 'serif'
+  },
+  textMenuSecond: {
+    fontSize: normalize(25),
+    color: '#EAC28F',
+    marginBottom: 20,
+    marginLeft: 100,
+    marginTop: -8,
+    fontWeight: 'bold',
+    textAlign: 'left',
+    fontFamily: 'serif'
+  },
 });
 
 export default Sandangan;

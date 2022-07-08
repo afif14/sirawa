@@ -2,17 +2,16 @@ import React from 'react'
 import { View, Text, StyleSheet, ImageBackground, ScrollView } from 'react-native'
 import CircleIcon from '../../components/circleIcon'
 import { globalStyles } from '../../styles/global'
+import { normalize } from '../../utils/normalize'
 
 const Guide = ({ navigation }) => {
-  const backToMenu = () => {
-    navigation.navigate('Menu')
-  }
 
   return (
     <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ styles.styleBackground }>
       <View style={ globalStyles.container }>
+      <Text style={ styles.textMenu }>Petunjuk</Text>
+          <Text style={styles.textMenuSecond}>Nggunakake Aplikasi</Text>
         <View style={ globalStyles.centerContainer }>
-          <Text style={ styles.headingText }>Petunjuk Nggunaake Aplikasi</Text>
           <View style={ styles.historyContainer }>
             <ScrollView>
               <Text style={ styles.historyText }>
@@ -51,7 +50,7 @@ const Guide = ({ navigation }) => {
           </View>
         </View>
         <View style={ { marginTop: 30, marginLeft: 250 } }>
-          <CircleIcon name='arrow-left' onPress={ backToMenu } />
+          <CircleIcon name='arrow-left' onPress={() => navigation.navigate('Menu') } />
         </View>
       </View>
     </ImageBackground>
@@ -93,7 +92,26 @@ const styles = StyleSheet.create({
   textGuide: {
     textAlign: 'left',
     paddingTop: 7
-  }
+  },
+  textMenu: {
+    fontSize: normalize(42),
+    fontWeight: 'bold',
+    textAlign: 'left',
+    marginTop: 70,
+    marginLeft: 35,
+    color: '#EA855B',
+    fontFamily: 'serif'
+  },
+  textMenuSecond: {
+    fontSize: normalize(25),
+    color: '#EAC28F',
+    marginBottom: 20,
+    marginLeft: 35,
+    marginTop: -8,
+    fontWeight: 'bold',
+    textAlign: 'left',
+    fontFamily: 'serif'
+  },
 })
 
 export default Guide

@@ -56,7 +56,8 @@ const AksaraLanPasangan = ({ navigation }) => {
     <View style={globalStyles.container}>
       <CircleIcon name='home' onPress={() => navigation.navigate('Menu')} />
       <View style={globalStyles.centerContainer}>
-        <Text style={styles.headingText}>Aksara Jawa Lan Pasangan</Text>
+        <Text style={styles.textMenu}>Aksara Jawa</Text>
+        <Text style={styles.textMenuSecond}>Lan Pasangan</Text>
         <View style={styles.historyContainer}>
           <Slick showsPagination={false} loop={false} buttonWrapperStyle={styles.buttonWrapper}>
             <View style={styles.row}>{hanacaraka()}</View>
@@ -122,7 +123,26 @@ const styles = StyleSheet.create({
   },
   buttonWrapper: {
     color: 'black',
-  }
+  },
+  textMenu: {
+    fontSize: normalize(40),
+    fontWeight: 'bold',
+    textAlign: 'left',
+    marginTop: 20,
+    marginLeft: 20,
+    color: '#EA855B',
+    fontFamily: 'serif'
+  },
+  textMenuSecond: {
+    fontSize: normalize(25),
+    color: '#EAC28F',
+    marginBottom: 20,
+    marginLeft: 100,
+    marginTop: -8,
+    fontWeight: 'bold',
+    textAlign: 'left',
+    fontFamily: 'serif'
+  },
 });
 
 export default AksaraLanPasangan;

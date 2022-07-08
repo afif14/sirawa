@@ -9,7 +9,8 @@ const Menu = ({ navigation }) => {
   return (
     <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ { width: '100%', height: '100%' } }>
     <View style={globalStyles.container}>
-      <Text style={styles.textMenu}>Sampeyan pengin sinau opo?</Text>
+      <Text style={styles.textMenu}>Kowe pengin</Text>
+      <Text style={styles.textMenuSecond}>sinau opo?</Text>
       <View style={styles.heightMenu}>
         <FlatButton
           style={ globalStyles.button }
@@ -44,7 +45,25 @@ const styles = StyleSheet.create({
   },
   marginTop: {
     marginTop: 10
-  }
+  },
+  textMenu: {
+    fontSize: normalize(30),
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: 120,
+    color: '#EA855B',
+    fontFamily: 'serif'
+  },
+  textMenuSecond: {
+    fontSize: normalize(35),
+    color: '#EAC28F',
+    marginBottom: 50,
+    marginTop: -8,
+    marginRight: 30,
+    fontWeight: 'bold',
+    textAlign: 'right',
+    fontFamily: 'serif'
+  },
 });
 
 export default Menu;

@@ -11,11 +11,12 @@ const DetailSandangan = ({ route, navigation }) => {
          <View style={ globalStyles.container }>
             <CircleIcon name='home' onPress={ () => navigation.navigate('Menu') } />
             <View style={ globalStyles.centerContainer }>
-               <Text style={ styles.headingText }>Sandangan Aksara Jawa</Text>
+               <Text style={ styles.textMenu }>Sandangan </Text>
+               <Text style={styles.textMenuSecond}>Aksara Jawa</Text>
                <View style={ styles.historyContainer }>
                   <View style={ styles.aksaraBox }>
+                     <Text adjustsFontSizeToFit style={ styles.textArtiHeading }>{ data.nama }</Text>
                      <Text adjustsFontSizeToFit style={ styles.textHeading }>{ data.aksara }</Text>
-                     <Text adjustsFontSizeToFit style={ styles.textArti }>{ data.nama }</Text>
                   </View>
                   <Text adjustsFontSizeToFit style={ styles.textTuladha }>Tuladha panganggone aksara `{ data.nama }` lan pasangane</Text>
                   <View style={ styles.containerContoh }>
@@ -92,30 +93,56 @@ const styles = StyleSheet.create({
       fontSize: normalize(16)
    },
    containerContoh: {
-      marginVertical: 5,
-      height: 170,
-      width: 260
+      maxHeight: 170,
+      maxWidth: 260
    },
    boxContoh: {
       padding: 10
    },
    textHeading: {
-      fontSize: normalize(45),
+      fontSize: normalize(35),
       fontWeight: '600',
-      padding: 5,
-      textAlign: 'center'
+      paddingBottom: 38,
+      textAlign: 'center',
+      
+   },
+   textArtiHeading: {
+      fontSize: normalize(20),
+      fontWeight: 'bold',
+      textAlign: 'center',
+      marginVertical: 10
    },
    textContoh: {
       fontSize: normalize(30),
       fontWeight: '600',
-      padding: 5,
-      textAlign: 'center'
+      textAlign: 'center',
+      paddingBottom: 29,
    },
    textArti: {
       fontSize: normalize(20),
       fontWeight: 'bold',
       textAlign: 'center'
-   }
+   },
+
+   textMenu: {
+      fontSize: normalize(40),
+      fontWeight: 'bold',
+      textAlign: 'left',
+      marginTop: 20,
+      marginLeft: 20,
+      color: '#EA855B',
+      fontFamily: 'serif'
+    },
+    textMenuSecond: {
+      fontSize: normalize(25),
+      color: '#EAC28F',
+      marginBottom: 20,
+      marginLeft: 100,
+      marginTop: -8,
+      fontWeight: 'bold',
+      textAlign: 'left',
+      fontFamily: 'serif'
+    },
 })
 
 export default DetailSandangan

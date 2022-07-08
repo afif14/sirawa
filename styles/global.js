@@ -29,6 +29,25 @@ export const globalStyles = StyleSheet.create({
     fontSize: 14,
     color: 'white'
   },
+  textMenu: {
+    fontSize: normalize(35),
+    fontWeight: 'bold',
+    textAlign: 'left',
+    marginTop: 70,
+    marginLeft: 20,
+    color: '#EA855B',
+    fontFamily: 'serif'
+  },
+  textMenuSecond: {
+    fontSize: normalize(25),
+    color: '#EAC28F',
+    marginBottom: 20,
+    marginLeft: 20,
+    marginTop: -8,
+    fontWeight: 'bold',
+    textAlign: 'left',
+    fontFamily: 'serif'
+  },
   input: {
     borderWidth: 1,
     backgroundColor: 'white',

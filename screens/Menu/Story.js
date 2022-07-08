@@ -2,14 +2,16 @@ import React from 'react';
 import { View, Text, StyleSheet, ScrollView, ImageBackground } from 'react-native';
 import CircleIcon from '../../components/circleIcon';
 import { globalStyles } from '../../styles/global';
+import { normalize } from '../../utils/normalize';
 
 const Story = ({ navigation }) => {
 
   return (
     <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ { width: '100%', height: '100%' } }>
     <View style={globalStyles.container}>
+    <Text style={styles.textMenu}>Niki Lo Sejarah</Text>
+        <Text style={styles.textMenuSecond}>Aksara Jawa</Text>
       <View style={globalStyles.centerContainer}>
-        <Text style={styles.headingText}>niki lo sejarah aksara Jawi</Text>
         <View style={styles.historyContainer}>
           <ScrollView>
               <Text style={ styles.historyText }>
@@ -68,7 +70,25 @@ const styles = StyleSheet.create({
   arrowRight: {
     display: 'flex',
     justifyContent: 'flex-end',
-  }
+  },
+  textMenu: {
+    fontSize: normalize(35),
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: 70,
+    color: '#EA855B',
+    fontFamily: 'serif'
+  },
+  textMenuSecond: {
+    fontSize: normalize(25),
+    color: '#EAC28F',
+    marginBottom: 20,
+    marginTop: -8,
+    marginRight: 30,
+    fontWeight: 'bold',
+    textAlign: 'right',
+    fontFamily: 'serif'
+  },
 });
 
 export default Story;
