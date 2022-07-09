@@ -4,7 +4,7 @@ import Slick from 'react-native-slick'
 import { globalStyles } from '../../styles/global'
 import CircleIcon from '../../components/circleIcon'
 import { Video, Audio } from 'expo-av'
-import { useEffect } from 'react'
+import { normalize } from '../../utils/normalize'
 
 var styles = {
 
@@ -23,6 +23,8 @@ var styles = {
       width: 273,
       height: 325,
       backgroundColor: 'black',
+      display: 'flex',
+      flex:1,
       borderRadius: 10,
       borderWidth: 1,
       marginLeft: 'auto',
@@ -56,7 +58,24 @@ var styles = {
       color: '#fff',
       fontSize: 30,
       fontWeight: 'bold'
-   }
+   }, 
+   textMenu: {
+      fontSize: normalize(32),
+      fontWeight: 'bold',
+      textAlign: 'center',
+      marginTop: 20,
+      color: '#EA855B',
+      fontFamily: 'serif'
+    },
+    textMenuSecond: {
+      fontSize: normalize(25),
+      color: '#EAC28F',
+      marginBottom: 20,
+      marginTop: -5,
+      fontWeight: 'bold',
+      textAlign: 'center',
+      fontFamily: 'serif'
+    },
 }
 
 const Taling = ({ navigation }) => {
@@ -68,7 +87,8 @@ const Taling = ({ navigation }) => {
          <View style={ globalStyles.container }>
             <CircleIcon name='home' onPress={ () => navigation.navigate('Menu') } />
             <View style={ globalStyles.centerContainer }>
-               <Text style={ styles.headingText }>Apalan Cepet Ala Bu Lilik</Text>
+               <Text style={ styles.textMenu }>Cara ngapalake Aksara Jawa</Text>
+               <Text style={styles.textMenuSecond}>ala Bu Lilik</Text>
             </View>
 
             <Slick loop={ false }>

@@ -11,11 +11,12 @@ const DetailSwara = ({ route, navigation }) => {
          <View style={ globalStyles.container }>
             <CircleIcon name='home' onPress={ () => navigation.navigate('Menu') } />
             <View style={ globalStyles.centerContainer }>
-               <Text style={ styles.headingText }>Aksara Swara</Text>
+               <Text style={ styles.textMenu }>Aksara </Text>
+               <Text style={styles.textMenuSecond}>Swara</Text>
                <View style={ styles.historyContainer }>
                   <View style={ styles.aksaraBox }>
-                     <Text adjustsFontSizeToFit style={ styles.textContoh }>{ data.aksara }</Text>
                      <Text style={ styles.textArti }>{ data.nama }</Text>
+                     <Text adjustsFontSizeToFit style={ styles.textContoh }>{ data.aksara }</Text>
                   </View>
                   <Text adjustsFontSizeToFit style={ styles.textTuladha }>Tuladha panganggone aksara swara `{ data.nama }`</Text>
                   <View style={ styles.containerContoh }>
@@ -78,7 +79,7 @@ const styles = StyleSheet.create({
       borderRadius: 7,
       display: 'flex',
       justifyContent: 'center',
-      height: '25%',
+      height: '27%',
       width: '70%',
       marginTop: 15,
       marginLeft: 'auto',
@@ -93,17 +94,36 @@ const styles = StyleSheet.create({
       maxWidth: 260
    },
    textContoh: {
-      fontSize: normalize(25),
+      fontSize: normalize(30),
       fontWeight: '600',
       textAlign: 'center',
-      paddingBottom: 10
+      paddingBottom: 29,
    },
    textArti: {
       fontSize: normalize(20),
       fontWeight: 'bold',
       textAlign: 'center',
-      marginVertical: 10,
-   }
+      marginTop: 8,
+   },
+   textMenu: {
+      fontSize: normalize(40),
+      fontWeight: 'bold',
+      textAlign: 'center',
+      marginTop: 20,
+      marginLeft: -100,
+      color: '#EA855B',
+      fontFamily: 'serif'
+    },
+    textMenuSecond: {
+      fontSize: normalize(35),
+      color: '#EAC28F',
+      marginBottom: 20,
+      marginLeft: 130,
+      marginTop: -20,
+      fontWeight: 'bold',
+      textAlign: 'center',
+      fontFamily: 'serif'
+    },
 })
 
 export default DetailSwara

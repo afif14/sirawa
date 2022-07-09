@@ -5,7 +5,7 @@ import CircleIcon from '../../components/circleIcon'
 import { FlatButton } from '../../components/button'
 import { tingkat1, tingkat2, tingkat3, tingkat4 } from '../../utils/soal'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-
+import { normalize } from '../../utils/normalize'
 
 var styles = {
    headingText: {
@@ -24,11 +24,10 @@ var styles = {
    },
    slide1: {
       width: 273,
-      height: 407,
+      height: 370,
       backgroundColor: 'white',
       borderRadius: 10,
       borderWidth: 1,
-      paddingHorizontal: 15,
       marginLeft: 'auto',
       marginRight: 'auto',
       marginTop: 'auto',
@@ -46,7 +45,25 @@ var styles = {
       marginTop: 8,
       backgroundColor: '#c4c4c4',
       marginVertical: 20
-   }
+   },
+   textMenu: {
+      fontSize: normalize(40),
+      fontWeight: 'bold',
+      textAlign: 'center',
+      marginTop: 20,
+      marginLeft: -20,
+      color: '#EA855B',
+      fontFamily: 'serif'
+    },
+    textMenuSecond: {
+      fontSize: normalize(30),
+      color: '#EAC28F',
+      marginLeft: 50,
+      marginTop: -10,
+      fontWeight: 'bold',
+      textAlign: 'center',
+      fontFamily: 'serif'
+    },
 }
 
 const LatihanSoal = ({ navigation }) => {
@@ -76,7 +93,8 @@ const LatihanSoal = ({ navigation }) => {
          <View style={ globalStyles.container }>
             <CircleIcon name='home' onPress={ () => navigation.navigate('Menu') } />
             <View style={ globalStyles.centerContainer }>
-               <Text style={ styles.headingText }>Latihan Soal</Text>
+               <Text style={ styles.textMenu }>Latihan Soal</Text>
+               <Text style={styles.textMenuSecond}>Aksara Jawa</Text>
             </View>
 
             <View style={ styles.slide1 }>

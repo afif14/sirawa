@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ImageBackground } from 'react-native';
 import { AksaraButton } from '../../components/aksaraButton';
 import CircleIcon from '../../components/circleIcon';
 import { globalStyles } from '../../styles/global';
 import data from '../../json/aksaraSwara.json';
+import { normalize } from '../../utils/normalize';
 
 const AksaraSwara = ({ navigation }) => {
   const aksara = data.aksaraSwara;
@@ -19,10 +20,12 @@ const AksaraSwara = ({ navigation }) => {
   };
 
   return (
+    <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ { width: '100%', height: '100%' } }>
     <View style={globalStyles.container}>
       <CircleIcon name='home' onPress={() => navigation.navigate('Menu')} />
       <View style={globalStyles.centerContainer}>
-        <Text style={styles.headingText}>Aksara Swara</Text>
+        <Text style={styles.textMenu}>Aksara </Text>
+        <Text style={styles.textMenuSecond}>Swara</Text>
         <View style={styles.historyContainer}>
           <View style={styles.row}>{list()}</View>
           <View style={styles.keterangan}>
@@ -39,6 +42,7 @@ const AksaraSwara = ({ navigation }) => {
         <CircleIcon name='arrow-left' onPress={() => navigation.navigate('Learn')} />
       </View>
     </View>
+    </ImageBackground>
   );
 };
 
@@ -76,6 +80,25 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     lineHeight: 21,
     marginBottom: 10,
+  },
+  textMenu: {
+    fontSize: normalize(40),
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: 20,
+    marginLeft: -100,
+    color: '#EA855B',
+    fontFamily: 'serif'
+  },
+  textMenuSecond: {
+    fontSize: normalize(35),
+    color: '#EAC28F',
+    marginBottom: 20,
+    marginLeft: 130,
+    marginTop: -20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    fontFamily: 'serif'
   },
 });
 

@@ -3,6 +3,7 @@ import { Text, View, TextInput, StyleSheet, Alert, ImageBackground } from 'react
 import { FlatButton } from '../components/button';
 import { globalStyles } from '../styles/global';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { normalize } from '../utils/normalize';
 
 export default function Login({ navigation }) {
   const [name, setName] = useState("");
@@ -28,7 +29,8 @@ export default function Login({ navigation }) {
   return (
     <ImageBackground source={require('../assets/images/BG-1.png')} style={{width: '100%', height: '100%'}}>
     <View style={globalStyles.container}>
-      <Text style={globalStyles.textMd}>Mlebet riyen</Text>
+      <Text style={styles.textMenu}>Mlebet </Text>
+      <Text style={styles.textMenuSecond}>riyen...</Text>
       <View>
         <TextInput
           placeholder='Nami Pepak'
@@ -68,5 +70,24 @@ const styles = StyleSheet.create({
     backgroundColor: '#8E806A',
     marginVertical: 10,
     color: 'white'
-  }
+  },
+  textMenu: {
+    fontSize: normalize(60),
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: 100,
+    marginLeft: 100,
+    color: '#EA855B',
+    fontFamily: 'serif'
+  },
+  textMenuSecond: {
+    fontSize: normalize(50),
+    color: '#EAC28F',
+    fontWeight: 'bold',
+    marginRight: 30,
+    marginTop: -30,
+    marginBottom: 50,
+    textAlign: 'center',
+    fontFamily: 'serif'
+  },
 })
