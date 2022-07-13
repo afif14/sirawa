@@ -29,8 +29,8 @@ const AksaraSwara = ({ navigation }) => {
         <View style={styles.historyContainer}>
           <View style={styles.row}>{list()}</View>
           <View style={styles.keterangan}>
-            <Text>Katerangan:</Text>
-            <Text>
+            <Text style={styles.keterangan}>Katerangan:</Text>
+            <Text style={styles.keterangan}>
               Aksara swara mung digunakake kanggo nulis aksara swara sing dadi
               suku kata. Aksara Swara ora bisa digunakake minangka aksara
               pasangan
@@ -57,9 +57,6 @@ const styles = StyleSheet.create({
   historyContainer: {
     width: 273,
     height: 407,
-    backgroundColor: 'white',
-    borderRadius: 10,
-    borderWidth: 1,
     paddingHorizontal: 15,
   },
   row: {
@@ -80,6 +77,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     lineHeight: 21,
     marginBottom: 10,
+    color: 'white'
   },
   textMenu: {
     fontSize: normalize(40),

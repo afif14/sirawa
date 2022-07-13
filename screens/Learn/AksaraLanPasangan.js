@@ -69,9 +69,7 @@ const AksaraLanPasangan = ({ navigation }) => {
           <View style={styles.keterangan}>
             <Text style={ styles.textKeterangan}>Katerangan:</Text>
             <Text style={ styles.textKeterangan}>
-              Aksara pasangan fungsine kanggo nyambungake konsonan gatra tutup
-              karo gatra sabanjure, kajaba aksara 'r', aksara 'h', lan aksara
-              'ng'.
+            Aksara pasangan fungsine kanggo nyambungake konsonan gatra tutup karo gatra sabanjure, kajaba aksara 'r', aksara 'h', lan aksara 'ng'.
             </Text>
           </View>
         </View>
@@ -95,10 +93,8 @@ const styles = StyleSheet.create({
   historyContainer: {
     width: 273,
     height: 407,
-    backgroundColor: 'white',
-    borderRadius: 10,
-    borderWidth: 1,
     paddingHorizontal: 15,
+    zIndex: -999
   },
   row: {
     flexDirection: 'row',
@@ -119,7 +115,8 @@ const styles = StyleSheet.create({
   },
   textKeterangan: {
     fontSize: normalize(17),
-    fontWeight: '600'
+    fontWeight: '600',
+    color: 'white'
   },
   buttonWrapper: {
     color: 'black',
