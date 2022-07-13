@@ -99,7 +99,7 @@ const LatihanSoal = ({ navigation }) => {
 
             <View style={ styles.slide1 }>
                <View style={ styles.containerButton }>
-                  <FlatButton text='Tingkat 1' style={ globalStyles.button } onPress={ () => navigation.navigate('ScreenSoal', { soal: tingkat1, level: 1 }) } />
+                  <FlatButton text='Tingkat 1' style={ styles.buttonLock } onPress={ () => navigation.navigate('ScreenSoal', { soal: tingkat1, level: 1 }) } />
                   <FlatButton text='Tingkat 2' style={ level?.tingkat2 ? globalStyles.button : styles.buttonLock } onPress={ () => navigation.navigate('ScreenSoal', { soal: tingkat2, level: 2 }) } />
                   <FlatButton text='Tingkat 3' style={ level?.tingkat3 ? globalStyles.button : styles.buttonLock } onPress={ () => navigation.navigate('ScreenSoal', { soal: tingkat3, level: 3 }) } />
                   <FlatButton text='Tingkat 4' style={ level?.tingkat4 ? globalStyles.button : styles.buttonLock } onPress={ () => navigation.navigate('ScreenSoal', { soal: tingkat4, level: 4 }) } />
