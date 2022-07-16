@@ -103,7 +103,7 @@ export const tingkat4 = [{
    id: 1,
    arti: "ꦧꦏ꧀ꦱꦺꦴ​ ꦧꦸꦭꦠ꧀",
    soal: "Aksara ing dhuwur wacane apa?",
-   pilihan: ["Bakso Bulat", "Bakso Kotak", "Bakaso Bulat", "Bakso Bulan"],
+   pilihan: ["Bakso Bulat", "Bakso Kotak", "Bakso Bulat", "Bakso Bulan"],
    jawaban: "Bakso Bulat",
 }, {
    id: 2,

@@ -11,7 +11,6 @@ const ScreenNilai = ({ navigation }) => {
 
   const historyScore = async () => {
     const scoreQuiz = await AsyncStorage.getItem("score");
-    console.log(scoreQuiz);
     if (scoreQuiz) {
       setHasil(JSON.parse(scoreQuiz));
     }
@@ -98,10 +97,8 @@ const ScreenNilai = ({ navigation }) => {
     const readJawaban = async () => {
       const bacaJawaban = await AsyncStorage.getItem("jawaban");
       if (bacaJawaban) {
-        console.log("ini jawaban", bacaJawaban);
         hasilJawab();
       } else {
-        console.log("ini score");
         historyScore();
       }
     };

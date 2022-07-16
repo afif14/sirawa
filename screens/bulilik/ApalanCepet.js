@@ -91,7 +91,7 @@ const Taling = ({ navigation }) => {
                <Text style={styles.textMenuSecond}>ala Bu Lilik</Text>
             </View>
 
-            <Slick loop={ false }>
+            <Slick loop={ false } showsButtons showsPagination={false}>
                <Video
                   ref={ video }
                   style={ styles.slide1 }
@@ -138,9 +138,6 @@ const Taling = ({ navigation }) => {
                   onPlaybackStatusUpdate={ status => setStatus(() => status) }
                />
             </Slick>
-            <View style={ { marginTop: 30, marginLeft: 250 } }>
-               <CircleIcon name='arrow-left' onPress={ () => navigation.navigate('Menu') } />
-            </View>
          </View>
       </ImageBackground>
    )

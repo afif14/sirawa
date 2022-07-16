@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, StyleSheet, ImageBackground } from "react-native";
+import { View, Text, StyleSheet, ImageBackground, Alert } from "react-native";
 import Slick from "react-native-slick";
 import CircleIcon from "../../components/circleIcon";
 import { globalStyles } from "../../styles/global";
@@ -115,6 +115,34 @@ const ScreenSoal = ({ route, navigation }) => {
     }
   };
 
+  const Exit = () => {
+    Alert.alert('Metu', 'Yakin metu saka Latian Soal? jawaban mu bakal ke reset kabeh', [
+      { text: 'Iyo', onPress: async () => {
+        await AsyncStorage.removeItem('jawaban')
+        await AsyncStorage.removeItem('level')
+        navigation.navigate("Menu") }},
+      {
+        text: 'Ora',
+        onPress: () => null,
+        style: 'cancel',
+      },
+    ])
+    return true
+  }
+
+  const Done = () => {
+    Alert.alert('Metu', 'Yakin kowe wes rampung ngerjakno latian soal?', [
+      { text: 'wes', onPress: async () => {
+        navigation.navigate("ScreenNilai") }},
+      {
+        text: 'urung',
+        onPress: () => null,
+        style: 'cancel',
+      },
+    ])
+    return true
+  }
+
   const kumpulanSoal = () => {
     return soal.map((value, index) => {
       return (
@@ -161,13 +189,11 @@ const ScreenSoal = ({ route, navigation }) => {
             justifyContent: "space-between",
           }}
         >
-          <CircleIcon name="home" onPress={() => navigation.navigate("Menu")} />
+          <CircleIcon name="home" onPress={Exit} />
           {level == 4 && (
             <CircleIcon
               name="star"
-              onPress={() => {
-                navigation.navigate("ScreenNilai");
-              }}
+              onPress={Done}
             />
           )}
         </View>
@@ -242,7 +268,7 @@ const styles = StyleSheet.create({
     borderRadius: 18,
     display: "flex",
     justifyContent: "center",
-    height: "27%",
+    height: "30%",
     width: "90%",
     marginLeft: "auto",
     marginRight: "auto",
@@ -252,6 +278,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     paddingBottom: 15,
+    marginTop: -25
   },
   textHitam: {
     color: "black",

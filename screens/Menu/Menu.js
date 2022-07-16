@@ -98,7 +98,7 @@ const Menu = ({ navigation }) => {
           <FlatButton text='Sejarah Aksara Jawa' style={ globalStyles.button } onPress={ () => navigation.navigate('Story') } />
           <FlatButton text='Sinau Aksara Jawa' style={ globalStyles.button } onPress={ () => navigation.navigate('Learn') } />
           <FlatButton text='apalan gelis ala bu lilik' style={ globalStyles.button } onPress={ () => navigation.navigate('ApalanCepet') } />
-          <FlatButton text='latian aksara Jawi' style={ globalStyles.button } onPress={ () => navigation.navigate('LatihanSoal') } />
+          <FlatButton text='latian aksara Jawa' style={ globalStyles.button } onPress={ () => navigation.navigate('LatihanSoal') } />
         </View>
         <View style={ styles.iconBottomContainer }>
           <CircleIcon name={ isPlaying ? 'volume-up' : 'volume-off' } onPress={ handleAudioPlayPause } />

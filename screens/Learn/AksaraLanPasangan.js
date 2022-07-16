@@ -59,7 +59,7 @@ const AksaraLanPasangan = ({ navigation }) => {
         <Text style={styles.textMenu}>Aksara Jawa</Text>
         <Text style={styles.textMenuSecond}>Lan Pasangan</Text>
         <View style={styles.historyContainer}>
-          <Slick showsPagination={false} loop={false} buttonWrapperStyle={styles.buttonWrapper}>
+          <Slick showsPagination={false} loop={false} buttonWrapperStyle={styles.buttonWrapper} showsButtons>
             <View style={styles.row}>{hanacaraka()}</View>
             <View style={styles.row}>{datasawala()}</View>
             <View style={styles.row}>{padhajayanya()}</View>

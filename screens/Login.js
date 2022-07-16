@@ -7,10 +7,9 @@ import { normalize } from '../utils/normalize';
 
 export default function Login({ navigation }) {
   const [name, setName] = useState("");
-  const [absen, setAbsen] = useState("")
 
   const setData = async () => {
-    if(name.length == 0 && absen.length == 0){
+    if(name.length == 0){
       Alert.alert('Nyuwun tulung diperhatikake!', 'Tulung tulis jenengmu ya, ben server iso srawung kowe')
     } else {
       try {
