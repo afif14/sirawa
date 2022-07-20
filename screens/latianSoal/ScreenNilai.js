@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
   historyContainer: {
     width: 260,
     height: 340,
-    backgroundColor: "white",
+    backgroundColor: "#f7dfc4",
     borderRadius: 10,
     borderWidth: 1,
   },
@@ -163,6 +163,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     padding: 10,
     fontFamily: "roboto-reguler",
+    color: '#1c1715'
   },
   textScore: {
     fontSize: 144,

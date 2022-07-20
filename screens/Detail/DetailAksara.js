@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
    historyContainer: {
       width: 273,
       height: 407,
-      backgroundColor: 'white',
+      backgroundColor: '#f7dfc4',
       borderRadius: 10,
       borderWidth: 1,
       paddingHorizontal: 15,
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
       color: 'black',
    },
    aksaraBox: {
-      backgroundColor: '#FFA1A1',
+      backgroundColor: '#e28164',
       borderRadius: 7,
       display: 'flex',
       justifyContent: 'center',

@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   historyContainer: {
     width: 300,
     height: 400,
-    backgroundColor: 'white',
+    backgroundColor: '#f7dfc4',
     borderRadius: 10,
     borderWidth: 1,
   },
@@ -61,6 +61,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     padding: 10,
     fontFamily: 'roboto-reguler',
+    color: '#1c1715'
   },
   bold: {
     fontSize: 14,
