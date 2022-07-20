@@ -125,7 +125,7 @@ export const tingkat4 = [{
    jawaban: "Toko roti",
 }, {
    id: 5,
-   arti: "ꦱꦺꦴꦠꦺꦴꦧꦚ꧀ꦗꦂ",
+   arti: "ꦱꦺꦴꦠꦺꦴꦧꦤ꧀ꦗꦂ",
    soal: "Aksara ing dhuwur wacane apa?",
    pilihan: ["Soto betawi", "Soto bundar", "Soto banjar", "Soto bandar"],
    jawaban: "Soto banjar",

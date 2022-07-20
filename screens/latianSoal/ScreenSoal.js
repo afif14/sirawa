@@ -116,8 +116,8 @@ const ScreenSoal = ({ route, navigation }) => {
   };
 
   const Exit = () => {
-    Alert.alert('Metu', 'Yakin metu saka Latian Soal? jawaban mu bakal ke reset kabeh', [
-      { text: 'Iyo', onPress: async () => {
+    Alert.alert('', 'Yen kowe metu saka Latihan Soal, Jawaban mu ora kesimpen', [
+      { text: 'Iya', onPress: async () => {
         await AsyncStorage.removeItem('jawaban')
         await AsyncStorage.removeItem('level')
         navigation.navigate("Menu") }},
@@ -131,8 +131,8 @@ const ScreenSoal = ({ route, navigation }) => {
   }
 
   const Done = () => {
-    Alert.alert('Metu', 'Yakin kowe wes rampung ngerjakno latian soal?', [
-      { text: 'wes', onPress: async () => {
+    Alert.alert('', 'Yakin kowe wes rampung ngerjakno Latian Soal?', [
+      { text: 'uwes', onPress: async () => {
         navigation.navigate("ScreenNilai") }},
       {
         text: 'urung',

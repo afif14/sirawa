@@ -9,8 +9,8 @@ const Menu = ({ navigation }) => {
   return (
     <ImageBackground source={ require('../../assets/images/BG-1.png') } style={ { width: '100%', height: '100%' } }>
     <View style={globalStyles.container}>
-      <Text style={styles.textMenu}>Kowe pengin</Text>
-      <Text style={styles.textMenuSecond}>sinau opo?</Text>
+      <Text style={styles.textMenu}>Kowe pingin</Text>
+      <Text style={styles.textMenuSecond}>Sinau apa?</Text>
       <View style={styles.heightMenu}>
         <FlatButton
           style={ globalStyles.button }

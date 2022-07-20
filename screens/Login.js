@@ -10,7 +10,7 @@ export default function Login({ navigation }) {
 
   const setData = async () => {
     if(name.length == 0){
-      Alert.alert('Nyuwun tulung diperhatikake!', 'Tulung tulis jenengmu ya, ben server iso srawung kowe')
+      Alert.alert('', 'Tulung tulis jenengmu, ben server iso srawung kowe')
     } else {
       try {
         await AsyncStorage.setItem('userName', name)

@@ -40,7 +40,7 @@ const Guide = ({ navigation }) => {
               </View>
               <View style={ styles.boxGuide }>
                 <CircleIcon size={ 15 } name="home" />
-                <Text style={ styles.textGuide }>Tombol omah, kanggo nampilake halaman utama</Text>
+                <Text style={ styles.textGuide }>Tombol omah, kanggo nampilake { "\n" }halaman utama</Text>
               </View>
               <View style={ styles.boxGuide }>
                 <CircleIcon size={ 15 } name="sign-out" />

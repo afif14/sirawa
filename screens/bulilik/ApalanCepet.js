@@ -95,7 +95,7 @@ const Taling = ({ navigation }) => {
                <Video
                   ref={ video }
                   style={ styles.slide1 }
-                  source={ require('../../assets/video/Halakadana.mp4') }
+                  source={ require('../../assets/video/RevHALANAKADA.mp4') }
                   useNativeControls
                   resizeMode="contain"
                   isLooping
@@ -104,7 +104,7 @@ const Taling = ({ navigation }) => {
                <Video
                   ref={ video }
                   style={ styles.slide1 }
-                  source={ require('../../assets/video/Casawadha.mp4') }
+                  source={ require('../../assets/video/RevCASAWADHA.mp4') }
                   useNativeControls
                   resizeMode="contain"
                   isLooping
@@ -131,7 +131,7 @@ const Taling = ({ navigation }) => {
                <Video
                   ref={ video }
                   style={ styles.slide1 }
-                  source={ require('../../assets/video/Tajama.mp4') }
+                  source={ require('../../assets/video/RevTAJAMA.mp4') }
                   useNativeControls
                   resizeMode="contain"
                   isLooping

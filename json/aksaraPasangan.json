@@ -78,9 +78,9 @@
             "nama": "La",
             "aksara": "ꦭ  ꧀ꦭ",
             "contoh1": "ꦭꦫꦱ꧀",
-            "contoh2": "ꦥ꧀ꦭꦒ",
+            "contoh2": "ꦥ꧀ꦭꦏꦠ꧀",
             "arti1": "Laras",
-            "arti2": "Plaga"
+            "arti2": "Plakat"
         }],
         "padhajayanya": [{
             "id": 1,
@@ -94,25 +94,25 @@
             "id": 2,
             "nama": "Dha",
             "aksara": "ꦝ   ꧀ꦝ",
-            "contoh1": "ꦝꦝꦒ꧀",
+            "contoh1": "ꦝꦱꦶ",
             "contoh2": "ꦏꦤ꧀ꦝꦁ​",
-            "arti1": "Dhadhag",
+            "arti1": "Dhasi",
             "arti2": "Kandhang"
         }, {
             "id": 3,
             "nama": "Ja",
             "aksara": "ꦗ  ꧀ꦗ",
             "contoh1": "ꦗꦒꦢ꧀",
-            "contoh2": "ꦥꦤ꧀ꦗꦏ꧀",
+            "contoh2": "ꦥꦤ꧀ꦗꦠ꧀",
             "arti1": "Jagad",
-            "arti2": "Panjak"
+            "arti2": "Panjat"
         }, {
             "id": 4,
             "nama": "Ya",
             "aksara": "ꦪ   ꧀ꦪ",
-            "contoh1": "ꦪꦪꦃ",
+            "contoh1": "ꦪꦩꦤ꧀",
             "contoh2": "ꦲꦤꦏ꧀ꦪꦠꦶꦩ꧀",
-            "arti1": "Yayah",
+            "arti1": "Yaman",
             "arti2": "Anak Yatim"
         }, {
             "id": 5,

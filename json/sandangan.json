@@ -3,9 +3,9 @@
         "id": 1,
         "nama": "Taling (e)",
         "aksara": "ꦺ",
-        "arti1": "Kalen",
+        "arti1": "Lele",
         "arti2": "Dhewe",
-        "contoh1": "ꦏꦭꦺꦤ꧀",
+        "contoh1": "ꦭꦺꦭꦺ",
         "contoh2": "ꦝꦺꦮꦺ"
     }, {
         "id": 2,
@@ -14,7 +14,7 @@
         "arti1": "Sepeda",
         "arti2": "Kencana",
         "contoh1": "ꦱꦼꦥꦺꦢ",
-        "contoh2": "ꦏꦼꦚ꧀ꦕꦤ"
+        "contoh2": "ꦏꦼꦤ꧀ꦕꦤ"
     }, {
         "id": 3,
         "nama": "Wulu (i)",
@@ -49,10 +49,10 @@
         "contoh2": "ꦗꦒꦸꦁ​​ꦧꦏꦂ"
     }, {
         "id": 7,
-        "nama": "Pakon = paten",
+        "nama": "Pangkon = paten",
         "aksara": "... ꧀",
         "arti1": "Mangan",
-        "arti2": "Khantil",
+        "arti2": "Kanthil",
         "contoh1": "ꦩꦔꦤ꧀",
         "contoh2": "ꦏꦤ꧀ꦛꦶꦭ꧀"
     }, {
@@ -68,8 +68,8 @@
         "nama": "Taling Tarung (o)",
         "aksara": "ꦺ....ꦴ",
         "arti1": "Sowan",
-        "arti2": "Mlongo",
+        "arti2": "Kolam",
         "contoh1": "ꦱꦺꦴꦮꦤ꧀",
-        "contoh2": "ꦩ꧀ꦭꦺꦴꦔꦺꦴ"
+        "contoh2": "ꦏꦺꦴꦭꦩ꧀"
     }]
 }
