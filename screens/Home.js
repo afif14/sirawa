@@ -20,9 +20,9 @@ export default function Home({ navigation }) {
 
 const styles = StyleSheet.create({
   splashTop: {
-    width: 414,
+    width: 279,
     height: 293,
-    marginTop: 200,
+    marginTop: 150,
     display: 'flex',
     alignItems: 'center'
   },
@@ -30,9 +30,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     paddingVertical: 10,
     paddingHorizontal: 34,
-    marginTop: 8,
     backgroundColor: '#8E806A',
-    marginVertical: 20,
     color: 'white'
   }
 })

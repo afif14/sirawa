@@ -56,9 +56,10 @@ const AksaraLanPasangan = ({ navigation }) => {
     <View style={globalStyles.container}>
       <CircleIcon name='home' onPress={() => navigation.navigate('Menu')} />
       <View style={globalStyles.centerContainer}>
-        <Text style={styles.headingText}>Aksara Jawa Lan Pasangan</Text>
+        <Text style={styles.textMenu}>Aksara Jawa</Text>
+        <Text style={styles.textMenuSecond}>Lan Pasangan</Text>
         <View style={styles.historyContainer}>
-          <Slick showsPagination={false} loop={false} buttonWrapperStyle={styles.buttonWrapper}>
+          <Slick showsPagination={false} loop={false} buttonWrapperStyle={styles.buttonWrapper} showsButtons>
             <View style={styles.row}>{hanacaraka()}</View>
             <View style={styles.row}>{datasawala()}</View>
             <View style={styles.row}>{padhajayanya()}</View>
@@ -68,9 +69,7 @@ const AksaraLanPasangan = ({ navigation }) => {
           <View style={styles.keterangan}>
             <Text style={ styles.textKeterangan}>Katerangan:</Text>
             <Text style={ styles.textKeterangan}>
-              Aksara pasangan fungsine kanggo nyambungake konsonan gatra tutup
-              karo gatra sabanjure, kajaba aksara 'r', aksara 'h', lan aksara
-              'ng'.
+            Aksara pasangan fungsine kanggo nyambungake konsonan gatra tutup karo gatra sabanjure, kajaba aksara 'r', aksara 'h', lan aksara 'ng'.
             </Text>
           </View>
         </View>
@@ -94,10 +93,8 @@ const styles = StyleSheet.create({
   historyContainer: {
     width: 273,
     height: 407,
-    backgroundColor: 'white',
-    borderRadius: 10,
-    borderWidth: 1,
     paddingHorizontal: 15,
+    zIndex: -999
   },
   row: {
     flexDirection: 'row',
@@ -118,11 +115,31 @@ const styles = StyleSheet.create({
   },
   textKeterangan: {
     fontSize: normalize(17),
-    fontWeight: '600'
+    fontWeight: '600',
+    color: 'white'
   },
   buttonWrapper: {
     color: 'black',
-  }
+  },
+  textMenu: {
+    fontSize: normalize(40),
+    fontWeight: 'bold',
+    textAlign: 'left',
+    marginTop: 20,
+    marginLeft: 20,
+    color: '#EA855B',
+    fontFamily: 'serif'
+  },
+  textMenuSecond: {
+    fontSize: normalize(25),
+    color: '#EAC28F',
+    marginBottom: 20,
+    marginLeft: 100,
+    marginTop: -8,
+    fontWeight: 'bold',
+    textAlign: 'left',
+    fontFamily: 'serif'
+  },
 });
 
 export default AksaraLanPasangan;

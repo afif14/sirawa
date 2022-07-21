@@ -78,9 +78,9 @@
             "nama": "La",
             "aksara": "ꦭ  ꧀ꦭ",
             "contoh1": "ꦭꦫꦱ꧀",
-            "contoh2": "ꦥ꧀ꦭꦒ",
+            "contoh2": "ꦥ꧀ꦭꦏꦠ꧀",
             "arti1": "Laras",
-            "arti2": "Plaga"
+            "arti2": "Plakat"
         }],
         "padhajayanya": [{
             "id": 1,
@@ -93,40 +93,40 @@
         }, {
             "id": 2,
             "nama": "Dha",
-            "aksara": "ꦝ ꧀ꦝ",
-            "contoh1": "ꦝꦝꦒ꧀",
+            "aksara": "ꦝ   ꧀ꦝ",
+            "contoh1": "ꦝꦱꦶ",
             "contoh2": "ꦏꦤ꧀ꦝꦁ​",
-            "arti1": "Dhadhag",
-            "arti2": "Lontar"
+            "arti1": "Dhasi",
+            "arti2": "Kandhang"
         }, {
             "id": 3,
             "nama": "Ja",
-            "aksara": "ꦗ ꧀ꦗ꧀ꦥ꧀ꦭ",
+            "aksara": "ꦗ  ꧀ꦗ",
             "contoh1": "ꦗꦒꦢ꧀",
-            "contoh2": "ꦥꦚ꧀ꦗꦏ꧀",
+            "contoh2": "ꦥꦤ꧀ꦗꦠ꧀",
             "arti1": "Jagad",
-            "arti2": "Panjak"
+            "arti2": "Panjat"
         }, {
             "id": 4,
             "nama": "Ya",
-            "aksara": "ꦪ ꧀ꦪ ",
-            "contoh1": "ꦗꦒꦢ꧀",
-            "contoh2": "ꦥꦚ꧀ꦗꦏ꧀",
-            "arti1": "Yayah",
+            "aksara": "ꦪ   ꧀ꦪ",
+            "contoh1": "ꦪꦩꦤ꧀",
+            "contoh2": "ꦲꦤꦏ꧀ꦪꦠꦶꦩ꧀",
+            "arti1": "Yaman",
             "arti2": "Anak Yatim"
         }, {
             "id": 5,
             "nama": "Nya",
             "aksara": "ꦚ ꧀ꦚ",
             "contoh1": "ꦚꦮ",
-            "contoh2": "ꦮꦶꦒ꧀ꦤꦤ꧀",
+            "contoh2": "ꦮꦶꦒ꧀ꦚꦤ꧀",
             "arti1": "Nyawa",
             "arti2": "Wignyan"
         }],
         "magabathanga": [{
             "id": 1,
             "nama": "Ma",
-            "aksara": "ꦩ ꧀ꦩ",
+            "aksara": "ꦩ  ꧀ꦩ",
             "contoh1": "ꦩꦪ",
             "contoh2": "ꦲꦠ꧀ꦩ",
             "arti1": "Maya",
@@ -135,7 +135,7 @@
         }, {
             "id": 2,
             "nama": "Ga",
-            "aksara": "ꦒ ꧀ꦒ",
+            "aksara": "ꦒ  ꧀ꦒ",
             "contoh1": "ꦒꦒꦃ",
             "contoh2": "ꦢꦶꦕꦺꦴꦏꦺꦴꦠ꧀ꦒꦗꦃ",
             "arti1": "Gagah",
@@ -144,7 +144,7 @@
         }, {
             "id": 3,
             "nama": "Ba",
-            "aksara": "ꦧ ꧀ꦧ꧀ꦩ",
+            "aksara": "ꦧ   ꧀ꦧ",
             "contoh1": "ꦧꦥꦏ꧀",
             "contoh2": "ꦲꦩ꧀ꦧꦺꦂ",
             "arti1": "Bapak",
@@ -152,15 +152,15 @@
         }, {
             "id": 4,
             "nama": "Tha",
-            "aksara": "ꦛ ꧀ꦛ꧀ꦩ",
+            "aksara": "ꦛ    ꧀ꦛ",
             "contoh1": "ꦏ꧀ꦭꦛꦏ꧀",
             "contoh2": "ꦤꦶꦱ꧀ꦛ",
-            "arti1": "Klatak",
-            "arti2": "Nista"
+            "arti1": "Klathak",
+            "arti2": "Nistha"
         }, {
             "id": 5,
             "nama": "Nga",
-            "aksara": "ꦔ ꧀ꦔ꧀ꦩ",
+            "aksara": "ꦔ    ꧀ꦔ",
             "contoh1": "ꦔꦂꦱ",
             "contoh2": "ꦲꦢꦺꦏ꧀ꦔꦢꦼꦒ꧀",
             "arti1": "Ngarsa",

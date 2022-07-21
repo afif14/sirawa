@@ -92,12 +92,13 @@ const Menu = ({ navigation }) => {
           <CircleIcon name='info' onPress={ () => navigation.navigate('Information') } />
           <CircleIcon name='question' onPress={ () => navigation.navigate('Guide') } />
         </View>
-        <Text style={ styles.textMenu }>Sugeng Rawuh, { name }</Text>
+        <Text style={ styles.textMenu }>Sugeng Rawuh,</Text>
+        <Text style={styles.textMenuSecond}>{ name }</Text>
         <View style={ styles.heightMenu }>
           <FlatButton text='Sejarah Aksara Jawa' style={ globalStyles.button } onPress={ () => navigation.navigate('Story') } />
           <FlatButton text='Sinau Aksara Jawa' style={ globalStyles.button } onPress={ () => navigation.navigate('Learn') } />
           <FlatButton text='apalan gelis ala bu lilik' style={ globalStyles.button } onPress={ () => navigation.navigate('ApalanCepet') } />
-          <FlatButton text='latian aksara Jawi' style={ globalStyles.button } onPress={ () => navigation.navigate('LatihanSoal') } />
+          <FlatButton text='latian aksara Jawa' style={ globalStyles.button } onPress={ () => navigation.navigate('LatihanSoal') } />
         </View>
         <View style={ styles.iconBottomContainer }>
           <CircleIcon name={ isPlaying ? 'volume-up' : 'volume-off' } onPress={ handleAudioPlayPause } />
@@ -117,11 +118,19 @@ const styles = StyleSheet.create({
     height: 70,
   },
   textMenu: {
-    fontSize: normalize(30),
+    fontSize: normalize(42),
     fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: 65,
+    color: '#EA855B',
+    fontFamily: 'serif'
+  },
+  textMenuSecond: {
+    fontSize: normalize(27),
+    color: '#EAC28F',
     marginBottom: 20,
-    marginTop: 100,
-    color: '#EAC28F'
+    textAlign: 'center',
+    fontFamily: 'serif'
   },
   iconContainer: {
     flexDirection: 'row',

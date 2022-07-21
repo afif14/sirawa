@@ -11,21 +11,22 @@ const DetailAksara = ({ route, navigation }) => {
          <View style={ globalStyles.container }>
             <CircleIcon name='home' onPress={ () => navigation.navigate('Menu') } />
             <View style={ globalStyles.centerContainer }>
-               <Text style={ styles.headingText }>Aksara Jawa Lan Pasangan</Text>
+            <Text style={ styles.textMenu }>Aksara Jawa</Text>
+            <Text style={styles.textMenuSecond}>Lan Pasangan</Text>
                <View style={ styles.historyContainer }>
                   <View style={ styles.aksaraBox }>
+                     <Text adjustsFontSizeToFit style={ styles.textArtiContoh }>{ data.nama }</Text>
                      <Text adjustsFontSizeToFit style={ styles.textContoh }>{ data.aksara }</Text>
-                     <Text adjustsFontSizeToFit style={ styles.textArti }>{ data.nama }</Text>
                   </View>
                   <Text adjustsFontSizeToFit style={ styles.textTuladha }>Tuladha panganggone aksara `{ data.nama }` lan pasangane</Text>
                   <View style={ styles.containerContoh }>
                      <View style={ styles.boxContoh }>
-                        <Text adjustsFontSizeToFit style={ styles.textContoh }>{ data.contoh1 }</Text>
                         <Text adjustsFontSizeToFit style={ styles.textArti }>{ data.arti1 }</Text>
+                        <Text adjustsFontSizeToFit style={ styles.textContoh }>{ data.contoh1 }</Text>
                      </View>
                      <View style={ styles.boxContoh }>
-                        <Text adjustsFontSizeToFit style={ styles.textContoh }>{ data.contoh2 }</Text>
                         <Text numberOfLines={ 1 } adjustsFontSizeToFit style={ styles.textArti }>{ data.arti2 }</Text>
+                        <Text adjustsFontSizeToFit style={ styles.textContoh }>{ data.contoh2 }</Text>
                      </View>
                   </View>
                </View>
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
    historyContainer: {
       width: 273,
       height: 407,
-      backgroundColor: 'white',
+      backgroundColor: '#f7dfc4',
       borderRadius: 10,
       borderWidth: 1,
       paddingHorizontal: 15,
@@ -74,7 +75,7 @@ const styles = StyleSheet.create({
       color: 'black',
    },
    aksaraBox: {
-      backgroundColor: '#FFA1A1',
+      backgroundColor: '#e28164',
       borderRadius: 7,
       display: 'flex',
       justifyContent: 'center',
@@ -110,11 +111,30 @@ const styles = StyleSheet.create({
       textAlign: 'center'
    },
    textArtiContoh: {
-      fontSize: normalize(20),
+      fontSize: normalize(23),
       fontWeight: 'bold',
       textAlign: 'center',
-      marginVertical: 20,
+      textTransform: 'uppercase',
    },
+   textMenu: {
+      fontSize: normalize(40),
+      fontWeight: 'bold',
+      textAlign: 'left',
+      marginTop: 20,
+      marginLeft: 20,
+      color: '#EA855B',
+      fontFamily: 'serif'
+    },
+    textMenuSecond: {
+      fontSize: normalize(25),
+      color: '#EAC28F',
+      marginBottom: 20,
+      marginLeft: 100,
+      marginTop: -8,
+      fontWeight: 'bold',
+      textAlign: 'left',
+      fontFamily: 'serif'
+    },
 })
 
 export default DetailAksara
